@@ -5,12 +5,35 @@
 #& npm build ./client
 
 
-(Get-Content ./client/src/Cloudmersive.APIClient.NETCore.NLP/Cloudmersive.APIClient.NETCore.NLP.csproj).replace('<Authors>Swagger</Authors>', "<Authors>Cloudmersive</Authors>") | Set-Content ./client/src/Cloudmersive.APIClient.NETCore.NLP/Cloudmersive.APIClient.NETCore.NLP.csproj
-(Get-Content ./client/src/Cloudmersive.APIClient.NETCore.NLP/Cloudmersive.APIClient.NETCore.NLP.csproj).replace('<Company>Swagger</Company>', "<Company>Cloudmersive</Company>") | Set-Content ./client/src/Cloudmersive.APIClient.NETCore.NLP/Cloudmersive.APIClient.NETCore.NLP.csproj
-(Get-Content ./client/src/Cloudmersive.APIClient.NETCore.NLP/Cloudmersive.APIClient.NETCore.NLP.csproj).replace('<AssemblyTitle>Swagger Library</AssemblyTitle>', "<AssemblyTitle>Cloudmersive NLP API Client</AssemblyTitle>") | Set-Content ./client/src/Cloudmersive.APIClient.NETCore.NLP/Cloudmersive.APIClient.NETCore.NLP.csproj
-(Get-Content ./client/src/Cloudmersive.APIClient.NETCore.NLP/Cloudmersive.APIClient.NETCore.NLP.csproj).replace('<Description>A library generated from a Swagger doc</Description>', "<Description>The powerful Natural Language Processing APIs let you perform part of speech tagging, entity identification, sentence parsing, and much more to help you understand the meaning of unstructured text.</Description>") | Set-Content ./client/src/Cloudmersive.APIClient.NETCore.NLP/Cloudmersive.APIClient.NETCore.NLP.csproj
-(Get-Content ./client/src/Cloudmersive.APIClient.NETCore.NLP/Cloudmersive.APIClient.NETCore.NLP.csproj).replace('<TargetFramework>net45</TargetFramework>', "<TargetFramework>netcoreapp2.1</TargetFramework>") | Set-Content ./client/src/Cloudmersive.APIClient.NETCore.NLP/Cloudmersive.APIClient.NETCore.NLP.csproj
 
 
-& dotnet build ./client/src/Cloudmersive.APIClient.NETCore.NLP/Cloudmersive.APIClient.NETCore.NLP.csproj -c Release
-& dotnet pack ./client/src/Cloudmersive.APIClient.NETCore.NLP/Cloudmersive.APIClient.NETCore.NLP.csproj -c Release
+
+
+
+
+
+$csprojpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.NLP/Cloudmersive.APIClient.NET.NLP.csproj
+$csprojtestpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.NLP.Test/Cloudmersive.APIClient.NET.NLP.Test.csproj
+$nuspecpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.NLP/Cloudmersive.APIClient.NET.NLP.nuspec
+$slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.NLP.sln
+
+
+(Get-Content $nuspecpath).replace('<title>Swagger Library</title>', "<title>Cloudmersive NLP API Client</title>") | Set-Content $nuspecpath
+(Get-Content $nuspecpath).replace('<authors>$author$</authors>', "<authors>Cloudmersive</authors>") | Set-Content $nuspecpath
+(Get-Content $nuspecpath).replace('<owners>$author$</owners>', "<owners>Cloudmersive</owners>") | Set-Content $nuspecpath
+(Get-Content $nuspecpath).replace('<description>A library generated from a Swagger doc</description>', "<description>The powerful Natural Language Processing APIs let you perform part of speech tagging, entity identification, sentence parsing, and much more to help you understand the meaning of unstructured text.</description>") | Set-Content $nuspecpath
+(Get-Content $nuspecpath).replace('<!-- Authors contain text that appears directly on the gallery -->', "<iconUrl>https://cloudmersive.com/images/cmsdk.png</iconUrl>") | Set-Content $nuspecpath
+
+
+
+
+
+
+
+./nuget.exe restore $csprojpath -SolutionDirectory ./client
+
+./nuget.exe restore $csprojtestpath -SolutionDirectory ./client
+
+C:\Windows\Microsoft.NET\Framework\v4.0.30319\msbuild.exe $slnpath /t:rebuild 
+
+./nuget.exe pack $csprojpath
