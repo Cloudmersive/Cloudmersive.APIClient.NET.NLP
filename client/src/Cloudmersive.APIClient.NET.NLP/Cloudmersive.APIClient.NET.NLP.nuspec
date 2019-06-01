@@ -22,7 +22,7 @@
         <description>The powerful Natural Language Processing APIs let you perform part of speech tagging, entity identification, sentence parsing, and much more to help you understand the meaning of unstructured text.</description>
 
         <!-- Dependencies are automatically installed when the package is installed -->
-        <dependencies>
+        <projectUrl>https://cloudmersive.com/nlp-api</projectUrl><dependencies>
 
             <dependency id="NewtonSoft.Json" version="10.0.3" />
             <dependency id="JsonSubTypes" version="1.2.0" />
