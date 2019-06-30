@@ -33,10 +33,10 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PosSentence" /> class.
         /// </summary>
-        /// <param name="Words">Words in the sentence.</param>
-        public PosSentence(List<PosTaggedWord> Words = default(List<PosTaggedWord>))
+        /// <param name="words">Words in the sentence.</param>
+        public PosSentence(List<PosTaggedWord> words = default(List<PosTaggedWord>))
         {
-            this.Words = Words;
+            this.Words = words;
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

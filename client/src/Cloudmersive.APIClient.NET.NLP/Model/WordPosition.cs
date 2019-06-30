@@ -33,16 +33,16 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="WordPosition" /> class.
         /// </summary>
-        /// <param name="Word">Word as a string.</param>
-        /// <param name="WordIndex">Zero-based index of the word; first word has index 0, second word has index 1 and so on.</param>
-        /// <param name="StartPosition">Zero-based character offset at which the word begins in the input string.</param>
-        /// <param name="EndPosition">Zero-based character offset at which the word ends in the input string.</param>
-        public WordPosition(string Word = default(string), int? WordIndex = default(int?), int? StartPosition = default(int?), int? EndPosition = default(int?))
+        /// <param name="word">Word as a string.</param>
+        /// <param name="wordIndex">Zero-based index of the word; first word has index 0, second word has index 1 and so on.</param>
+        /// <param name="startPosition">Zero-based character offset at which the word begins in the input string.</param>
+        /// <param name="endPosition">Zero-based character offset at which the word ends in the input string.</param>
+        public WordPosition(string word = default(string), int? wordIndex = default(int?), int? startPosition = default(int?), int? endPosition = default(int?))
         {
-            this.Word = Word;
-            this.WordIndex = WordIndex;
-            this.StartPosition = StartPosition;
-            this.EndPosition = EndPosition;
+            this.Word = word;
+            this.WordIndex = wordIndex;
+            this.StartPosition = startPosition;
+            this.EndPosition = endPosition;
         }
         
         /// <summary>
@@ -93,7 +93,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

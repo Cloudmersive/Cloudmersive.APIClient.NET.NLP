@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CheckSentenceJsonResponse" /> class.
         /// </summary>
-        /// <param name="IncorrectCount">Number of incorrect words.</param>
-        /// <param name="Words">Words in the sentence, both correct and incorrect.</param>
-        public CheckSentenceJsonResponse(int? IncorrectCount = default(int?), List<CorrectWordInSentenceJsonResponse> Words = default(List<CorrectWordInSentenceJsonResponse>))
+        /// <param name="incorrectCount">Number of incorrect words.</param>
+        /// <param name="words">Words in the sentence, both correct and incorrect.</param>
+        public CheckSentenceJsonResponse(int? incorrectCount = default(int?), List<CorrectWordInSentenceJsonResponse> words = default(List<CorrectWordInSentenceJsonResponse>))
         {
-            this.IncorrectCount = IncorrectCount;
-            this.Words = Words;
+            this.IncorrectCount = incorrectCount;
+            this.Words = words;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs let you perform part of speech tag
 This C# SDK is for the [Cloudmersive Natural Language Processing API](https://www.cloudmersive.com/nlp-api):
 
 - API version: v1
-- SDK version: 1.2.4
+- SDK version: 2.0.1
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -19,7 +19,7 @@ This C# SDK is for the [Cloudmersive Natural Language Processing API](https://ww
 - [Json.NET](https://www.nuget.org/packages/Newtonsoft.Json/) - 7.0.0 or later
 - [JsonSubTypes](https://www.nuget.org/packages/JsonSubTypes/) - 1.2.0 or later
 
-The DLLs included in the package may not be the latest version. We recommend using [NuGet] (https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
+The DLLs included in the package may not be the latest version. We recommend using [NuGet](https://docs.nuget.org/consume/installing-nuget) to obtain the latest version of the packages:
 ```
 Install-Package RestSharp
 Install-Package Newtonsoft.Json

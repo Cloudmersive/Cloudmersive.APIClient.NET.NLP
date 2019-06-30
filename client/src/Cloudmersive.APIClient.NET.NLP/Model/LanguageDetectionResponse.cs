@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="LanguageDetectionResponse" /> class.
         /// </summary>
-        /// <param name="Successful">True if the language detection operation was successful, false otherwise.</param>
-        /// <param name="DetectedLanguageThreeLetterCode">ISO 639 three letter language code.</param>
-        /// <param name="DetectedLanguageFullName">The full name (in English) of the detected language.</param>
-        public LanguageDetectionResponse(bool? Successful = default(bool?), string DetectedLanguageThreeLetterCode = default(string), string DetectedLanguageFullName = default(string))
+        /// <param name="successful">True if the language detection operation was successful, false otherwise.</param>
+        /// <param name="detectedLanguageThreeLetterCode">ISO 639 three letter language code.</param>
+        /// <param name="detectedLanguageFullName">The full name (in English) of the detected language.</param>
+        public LanguageDetectionResponse(bool? successful = default(bool?), string detectedLanguageThreeLetterCode = default(string), string detectedLanguageFullName = default(string))
         {
-            this.Successful = Successful;
-            this.DetectedLanguageThreeLetterCode = DetectedLanguageThreeLetterCode;
-            this.DetectedLanguageFullName = DetectedLanguageFullName;
+            this.Successful = successful;
+            this.DetectedLanguageThreeLetterCode = detectedLanguageThreeLetterCode;
+            this.DetectedLanguageFullName = detectedLanguageFullName;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

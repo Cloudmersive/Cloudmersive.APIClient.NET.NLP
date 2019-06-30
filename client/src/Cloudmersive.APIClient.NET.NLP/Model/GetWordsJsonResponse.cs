@@ -33,10 +33,10 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="GetWordsJsonResponse" /> class.
         /// </summary>
-        /// <param name="Words">Array of words.</param>
-        public GetWordsJsonResponse(List<WordPosition> Words = default(List<WordPosition>))
+        /// <param name="words">Array of words.</param>
+        public GetWordsJsonResponse(List<WordPosition> words = default(List<WordPosition>))
         {
-            this.Words = Words;
+            this.Words = words;
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

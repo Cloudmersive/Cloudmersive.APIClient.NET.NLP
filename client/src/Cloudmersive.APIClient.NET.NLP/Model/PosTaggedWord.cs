@@ -33,12 +33,12 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PosTaggedWord" /> class.
         /// </summary>
-        /// <param name="Word">Word that was tagged.</param>
-        /// <param name="Tag">Penn Treebank tag applied to the word.</param>
-        public PosTaggedWord(Object Word = default(Object), Object Tag = default(Object))
+        /// <param name="word">Word that was tagged.</param>
+        /// <param name="tag">Penn Treebank tag applied to the word.</param>
+        public PosTaggedWord(Object word = default(Object), Object tag = default(Object))
         {
-            this.Word = Word;
-            this.Tag = Tag;
+            this.Word = word;
+            this.Tag = tag;
         }
         
         /// <summary>
@@ -73,7 +73,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

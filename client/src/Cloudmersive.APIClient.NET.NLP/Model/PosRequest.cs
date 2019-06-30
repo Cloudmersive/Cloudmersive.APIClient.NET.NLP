@@ -33,10 +33,10 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PosRequest" /> class.
         /// </summary>
-        /// <param name="InputText">Input text string.</param>
-        public PosRequest(string InputText = default(string))
+        /// <param name="inputText">Input text string.</param>
+        public PosRequest(string inputText = default(string))
         {
-            this.InputText = InputText;
+            this.InputText = inputText;
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,10 +33,10 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CheckJsonResponse" /> class.
         /// </summary>
-        /// <param name="Correct">True if spellected correctly, false otherwise.</param>
-        public CheckJsonResponse(bool? Correct = default(bool?))
+        /// <param name="correct">True if spellected correctly, false otherwise.</param>
+        public CheckJsonResponse(bool? correct = default(bool?))
         {
-            this.Correct = Correct;
+            this.Correct = correct;
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,10 +33,10 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="PosResponse" /> class.
         /// </summary>
-        /// <param name="TaggedSentences">Sentences in the string.</param>
-        public PosResponse(List<PosSentence> TaggedSentences = default(List<PosSentence>))
+        /// <param name="taggedSentences">Sentences in the string.</param>
+        public PosResponse(List<PosSentence> taggedSentences = default(List<PosSentence>))
         {
-            this.TaggedSentences = TaggedSentences;
+            this.TaggedSentences = taggedSentences;
         }
         
         /// <summary>
@@ -63,7 +63,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }

@@ -33,14 +33,14 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// <summary>
         /// Initializes a new instance of the <see cref="CorrectWordInSentenceJsonResponse" /> class.
         /// </summary>
-        /// <param name="Word">Position of the word.</param>
-        /// <param name="Correct">True if the word is spelled correctly, false otherwise.</param>
-        /// <param name="Suggestions">Suggested spelling improvements.</param>
-        public CorrectWordInSentenceJsonResponse(WordPosition Word = default(WordPosition), bool? Correct = default(bool?), List<string> Suggestions = default(List<string>))
+        /// <param name="word">Position of the word.</param>
+        /// <param name="correct">True if the word is spelled correctly, false otherwise.</param>
+        /// <param name="suggestions">Suggested spelling improvements.</param>
+        public CorrectWordInSentenceJsonResponse(WordPosition word = default(WordPosition), bool? correct = default(bool?), List<string> suggestions = default(List<string>))
         {
-            this.Word = Word;
-            this.Correct = Correct;
-            this.Suggestions = Suggestions;
+            this.Word = word;
+            this.Correct = correct;
+            this.Suggestions = suggestions;
         }
         
         /// <summary>
@@ -83,7 +83,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// Returns the JSON string presentation of the object
         /// </summary>
         /// <returns>JSON string presentation of the object</returns>
-        public string ToJson()
+        public virtual string ToJson()
         {
             return JsonConvert.SerializeObject(this, Formatting.Indented);
         }
