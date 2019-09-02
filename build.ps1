@@ -18,7 +18,7 @@ $nuspecpath = Resolve-Path ./client/src/Cloudmersive.APIClient.NET.NLP/Cloudmers
 $slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.NLP.sln
 
 
-(Get-Content $nuspecpath).replace('<title>Swagger Library</title>', "<title>Cloudmersive NLP API Client</title>") | Set-Content $nuspecpath
+(Get-Content $nuspecpath).replace('<title>Swagger Library</title>', "<title>Cloudmersive NLP API Client</title><licenseUrl>https://www.apache.org/licenses/LICENSE-2.0.txt</licenseUrl>") | Set-Content $nuspecpath
 (Get-Content $nuspecpath).replace('<authors>$author$</authors>', "<authors>Cloudmersive</authors>") | Set-Content $nuspecpath
 (Get-Content $nuspecpath).replace('<owners>$author$</owners>', "<owners>Cloudmersive</owners>") | Set-Content $nuspecpath
 (Get-Content $nuspecpath).replace('<description>A library generated from a Swagger doc</description>', "<description>The powerful Natural Language Processing APIs let you perform part of speech tagging, entity identification, sentence parsing, and much more to help you understand the meaning of unstructured text.</description>") | Set-Content $nuspecpath
