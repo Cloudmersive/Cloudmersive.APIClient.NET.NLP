@@ -28,7 +28,7 @@ $slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.NLP.sln
 # RestSharp 106.6.10 - Core Project
 (Get-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj').replace('<PackageReference Include="RestSharp" Version="105.1.0" />', '<PackageReference Include="RestSharp" Version="106.6.10" />') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj'
 
-(Get-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.nuspec').replace('<dependency id="RestSharp" version="105.1.0" />', '<dependency id="RestSharp" version="106.6.10" />') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.nuspec'
+(Get-Content $nuspecpath).replace('<dependency id="RestSharp" version="105.1.0" />', '<dependency id="RestSharp" version="106.6.10" />') | Set-Content $nuspecpath
 
 (Get-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj').replace('<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>', '<TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj'
 (Get-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj').replace('<Reference Include="RestSharp">', '<Reference Include="RestSharp, Version=106.6.10.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj'
