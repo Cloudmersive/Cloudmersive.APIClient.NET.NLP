@@ -25,6 +25,35 @@ $slnpath = Resolve-Path ./client/Cloudmersive.APIClient.NET.NLP.sln
 (Get-Content $nuspecpath).replace('<!-- Authors contain text that appears directly on the gallery -->', "<iconUrl>https://cloudmersive.com/images/cmsdk.png</iconUrl>") | Set-Content $nuspecpath
 (Get-Content $nuspecpath).replace('<dependencies>', "<projectUrl>https://cloudmersive.com/nlp-api</projectUrl><dependencies>") | Set-Content $nuspecpath
 
+# RestSharp 106.6.10 - Core Project
+(Get-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj').replace('<PackageReference Include="RestSharp" Version="105.1.0" />', '<PackageReference Include="RestSharp" Version="106.6.10" />') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj'
+
+(Get-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.nuspec').replace('<dependency id="RestSharp" version="105.1.0" />', '<dependency id="RestSharp" version="106.6.10" />') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.nuspec'
+
+(Get-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj').replace('<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>', '<TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj'
+(Get-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj').replace('<Reference Include="RestSharp">', '<Reference Include="RestSharp, Version=106.6.10.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj'
+
+(Get-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj').replace('$(SolutionDir)\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll', '$(SolutionDir)\packages\RestSharp.106.6.10\lib\net452\RestSharp.dll') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj'
+(Get-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj').replace('..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll', '..\packages\RestSharp.106.6.10\lib\net452\RestSharp.dll') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj'
+(Get-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj').replace('..\..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll', '..\..\packages\RestSharp.106.6.10\lib\net452\RestSharp.dll') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj'
+(Get-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj').replace('..\..\vendor\RestSharp.105.1.0\lib\net45\RestSharp.dll', '..\..\vendor\RestSharp.106.6.10\lib\net452\RestSharp.dll') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Cloudmersive.APIClient.NET.NLP.csproj'
+
+# RestSharp 106.6.10 - Test Project
+(Get-Content $csprojtestpath).replace('<PackageReference Include="RestSharp" Version="105.1.0" />', '<PackageReference Include="RestSharp" Version="106.6.10" />') | Set-Content $csprojtestpath
+
+(Get-Content $csprojtestpath).replace('<TargetFrameworkVersion>v4.5</TargetFrameworkVersion>', '<TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>') | Set-Content $csprojtestpath
+(Get-Content $csprojtestpath).replace('<Reference Include="RestSharp">', '<Reference Include="RestSharp, Version=106.6.10.0, Culture=neutral, PublicKeyToken=598062e77f915f75, processorArchitecture=MSIL">') | Set-Content $csprojtestpath
+
+(Get-Content $csprojtestpath).replace('$(SolutionDir)\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll', '$(SolutionDir)\packages\RestSharp.106.6.10\lib\net452\RestSharp.dll') | Set-Content $csprojtestpath
+(Get-Content $csprojtestpath).replace('..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll', '..\packages\RestSharp.106.6.10\lib\net452\RestSharp.dll') | Set-Content $csprojtestpath
+(Get-Content $csprojtestpath).replace('..\..\packages\RestSharp.105.1.0\lib\net45\RestSharp.dll', '..\..\packages\RestSharp.106.6.10\lib\net452\RestSharp.dll') | Set-Content $csprojtestpath
+(Get-Content $csprojtestpath).replace('..\..\vendor\RestSharp.105.1.0\lib\net45\RestSharp.dll', '..\..\vendor\RestSharp.106.6.10\lib\net452\RestSharp.dll') | Set-Content $csprojtestpath
+
+
+# Packages.config
+
+(Get-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\packages.config').replace('<package id="RestSharp" version="105.1.0" targetFramework="net45" developmentDependency="true" />', '<package id="RestSharp" version="106.6.10" targetFramework="net45" developmentDependency="true" />') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\packages.config'
+(Get-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Client\ApiClient.cs').replace('request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentType);', 'request.AddFile(param.Value.Name, param.Value.Writer, param.Value.FileName, param.Value.ContentLength, param.Value.ContentType);') | Set-Content '.\client\src\Cloudmersive.APIClient.NET.NLP\Client\ApiClient.cs'
 
 
 

@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs let you perform part of speech tag
 This C# SDK is for the [Cloudmersive Natural Language Processing API](https://www.cloudmersive.com/nlp-api):
 
 - API version: v1
-- SDK version: 2.0.2
+- SDK version: 3.0.1
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
