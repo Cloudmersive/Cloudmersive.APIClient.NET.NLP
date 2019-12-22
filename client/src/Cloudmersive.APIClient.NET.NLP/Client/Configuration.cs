@@ -1,7 +1,7 @@
 /* 
- * nlpapi
+ * nlpapiv2
  *
- * The powerful Natural Language Processing APIs let you perform part of speech tagging, entity identification, sentence parsing, and much more to help you understand the meaning of unstructured text.
+ * The powerful Natural Language Processing APIs (v2) let you perform part of speech tagging, entity identification, sentence parsing, and much more to help you understand the meaning of unstructured text.
  *
  * OpenAPI spec version: v1
  * 
@@ -29,7 +29,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Client
         /// Version of the package.
         /// </summary>
         /// <value>Version of the package.</value>
-        public const string Version = "3.0.1";
+        public const string Version = "4.0.1";
 
         /// <summary>
         /// Identifier for ISO 8601 DateTime Format
@@ -114,7 +114,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Client
         /// </summary>
         public Configuration()
         {
-            UserAgent = "Swagger-Codegen/3.0.1/csharp";
+            UserAgent = "Swagger-Codegen/4.0.1/csharp";
             BasePath = "https://api.cloudmersive.com";
             DefaultHeader = new ConcurrentDictionary<string, string>();
             ApiKey = new ConcurrentDictionary<string, string>();
@@ -187,7 +187,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Client
             string tempFolderPath = null,
             string dateTimeFormat = null,
             int timeout = 100000,
-            string userAgent = "Swagger-Codegen/3.0.1/csharp"
+            string userAgent = "Swagger-Codegen/4.0.1/csharp"
             // ReSharper restore UnusedParameter.Local
             )
         {
@@ -422,7 +422,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Client
             report += "    OS: " + System.Environment.OSVersion + "\n";
             report += "    .NET Framework Version: " + System.Environment.Version  + "\n";
             report += "    Version of the API: v1\n";
-            report += "    SDK Package Version: 3.0.1\n";
+            report += "    SDK Package Version: 4.0.1\n";
 
             return report;
         }

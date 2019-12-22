@@ -4,12 +4,12 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**LanguageDetectionPost**](LanguageDetectionApi.md#languagedetectionpost) | **POST** /nlp/language/detect | Detect language of text
+[**LanguageDetectionGetLanguage**](LanguageDetectionApi.md#languagedetectiongetlanguage) | **POST** /nlp-v2/language/detect | Detect language of text
 
 
-<a name="languagedetectionpost"></a>
-# **LanguageDetectionPost**
-> LanguageDetectionResponse LanguageDetectionPost (string textToDetect)
+<a name="languagedetectiongetlanguage"></a>
+# **LanguageDetectionGetLanguage**
+> LanguageDetectionResponse LanguageDetectionGetLanguage (LanguageDetectionRequest input)
 
 Detect language of text
 
@@ -25,7 +25,7 @@ using Cloudmersive.APIClient.NET.NLP.Model;
 
 namespace Example
 {
-    public class LanguageDetectionPostExample
+    public class LanguageDetectionGetLanguageExample
     {
         public void main()
         {
@@ -35,17 +35,17 @@ namespace Example
             // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
 
             var apiInstance = new LanguageDetectionApi();
-            var textToDetect = textToDetect_example;  // string | Text to detect language of
+            var input = new LanguageDetectionRequest(); // LanguageDetectionRequest | 
 
             try
             {
                 // Detect language of text
-                LanguageDetectionResponse result = apiInstance.LanguageDetectionPost(textToDetect);
+                LanguageDetectionResponse result = apiInstance.LanguageDetectionGetLanguage(input);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling LanguageDetectionApi.LanguageDetectionPost: " + e.Message );
+                Debug.Print("Exception when calling LanguageDetectionApi.LanguageDetectionGetLanguage: " + e.Message );
             }
         }
     }
@@ -56,7 +56,7 @@ namespace Example
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **textToDetect** | **string**| Text to detect language of | 
+ **input** | [**LanguageDetectionRequest**](LanguageDetectionRequest.md)|  | 
 
 ### Return type
 

@@ -1,7 +1,7 @@
 /* 
- * nlpapi
+ * nlpapiv2
  *
- * The powerful Natural Language Processing APIs let you perform part of speech tagging, entity identification, sentence parsing, and much more to help you understand the meaning of unstructured text.
+ * The powerful Natural Language Processing APIs (v2) let you perform part of speech tagging, entity identification, sentence parsing, and much more to help you understand the meaning of unstructured text.
  *
  * OpenAPI spec version: v1
  * 
@@ -65,14 +65,14 @@ namespace Cloudmersive.APIClient.NET.NLP.Test
 
         
         /// <summary>
-        /// Test LanguageDetectionPost
+        /// Test LanguageDetectionGetLanguage
         /// </summary>
         [Test]
-        public void LanguageDetectionPostTest()
+        public void LanguageDetectionGetLanguageTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
-            //string textToDetect = null;
-            //var response = instance.LanguageDetectionPost(textToDetect);
+            //LanguageDetectionRequest input = null;
+            //var response = instance.LanguageDetectionGetLanguage(input);
             //Assert.IsInstanceOf<LanguageDetectionResponse> (response, "response is LanguageDetectionResponse");
         }
         

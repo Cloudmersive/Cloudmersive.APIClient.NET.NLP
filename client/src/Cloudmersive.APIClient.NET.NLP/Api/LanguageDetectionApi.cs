@@ -1,7 +1,7 @@
 /* 
- * nlpapi
+ * nlpapiv2
  *
- * The powerful Natural Language Processing APIs let you perform part of speech tagging, entity identification, sentence parsing, and much more to help you understand the meaning of unstructured text.
+ * The powerful Natural Language Processing APIs (v2) let you perform part of speech tagging, entity identification, sentence parsing, and much more to help you understand the meaning of unstructured text.
  *
  * OpenAPI spec version: v1
  * 
@@ -31,9 +31,9 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// Automatically determine which language a text string is written in.  Supports Danish (DAN), German (DEU), English (ENG), French (FRA), Italian (ITA), Japanese (JPN), Korean (KOR), Dutch (NLD), Norwegian (NOR), Portuguese (POR), Russian (RUS), Spanish (SPA), Swedish (SWE), Chinese (ZHO).
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="textToDetect">Text to detect language of</param>
+        /// <param name="input"></param>
         /// <returns>LanguageDetectionResponse</returns>
-        LanguageDetectionResponse LanguageDetectionPost (string textToDetect);
+        LanguageDetectionResponse LanguageDetectionGetLanguage (LanguageDetectionRequest input);
 
         /// <summary>
         /// Detect language of text
@@ -42,9 +42,9 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// Automatically determine which language a text string is written in.  Supports Danish (DAN), German (DEU), English (ENG), French (FRA), Italian (ITA), Japanese (JPN), Korean (KOR), Dutch (NLD), Norwegian (NOR), Portuguese (POR), Russian (RUS), Spanish (SPA), Swedish (SWE), Chinese (ZHO).
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="textToDetect">Text to detect language of</param>
+        /// <param name="input"></param>
         /// <returns>ApiResponse of LanguageDetectionResponse</returns>
-        ApiResponse<LanguageDetectionResponse> LanguageDetectionPostWithHttpInfo (string textToDetect);
+        ApiResponse<LanguageDetectionResponse> LanguageDetectionGetLanguageWithHttpInfo (LanguageDetectionRequest input);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -54,9 +54,9 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// Automatically determine which language a text string is written in.  Supports Danish (DAN), German (DEU), English (ENG), French (FRA), Italian (ITA), Japanese (JPN), Korean (KOR), Dutch (NLD), Norwegian (NOR), Portuguese (POR), Russian (RUS), Spanish (SPA), Swedish (SWE), Chinese (ZHO).
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="textToDetect">Text to detect language of</param>
+        /// <param name="input"></param>
         /// <returns>Task of LanguageDetectionResponse</returns>
-        System.Threading.Tasks.Task<LanguageDetectionResponse> LanguageDetectionPostAsync (string textToDetect);
+        System.Threading.Tasks.Task<LanguageDetectionResponse> LanguageDetectionGetLanguageAsync (LanguageDetectionRequest input);
 
         /// <summary>
         /// Detect language of text
@@ -65,9 +65,9 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// Automatically determine which language a text string is written in.  Supports Danish (DAN), German (DEU), English (ENG), French (FRA), Italian (ITA), Japanese (JPN), Korean (KOR), Dutch (NLD), Norwegian (NOR), Portuguese (POR), Russian (RUS), Spanish (SPA), Swedish (SWE), Chinese (ZHO).
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="textToDetect">Text to detect language of</param>
+        /// <param name="input"></param>
         /// <returns>Task of ApiResponse (LanguageDetectionResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<LanguageDetectionResponse>> LanguageDetectionPostAsyncWithHttpInfo (string textToDetect);
+        System.Threading.Tasks.Task<ApiResponse<LanguageDetectionResponse>> LanguageDetectionGetLanguageAsyncWithHttpInfo (LanguageDetectionRequest input);
         #endregion Asynchronous Operations
     }
 
@@ -172,11 +172,11 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// Detect language of text Automatically determine which language a text string is written in.  Supports Danish (DAN), German (DEU), English (ENG), French (FRA), Italian (ITA), Japanese (JPN), Korean (KOR), Dutch (NLD), Norwegian (NOR), Portuguese (POR), Russian (RUS), Spanish (SPA), Swedish (SWE), Chinese (ZHO).
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="textToDetect">Text to detect language of</param>
+        /// <param name="input"></param>
         /// <returns>LanguageDetectionResponse</returns>
-        public LanguageDetectionResponse LanguageDetectionPost (string textToDetect)
+        public LanguageDetectionResponse LanguageDetectionGetLanguage (LanguageDetectionRequest input)
         {
-             ApiResponse<LanguageDetectionResponse> localVarResponse = LanguageDetectionPostWithHttpInfo(textToDetect);
+             ApiResponse<LanguageDetectionResponse> localVarResponse = LanguageDetectionGetLanguageWithHttpInfo(input);
              return localVarResponse.Data;
         }
 
@@ -184,15 +184,15 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// Detect language of text Automatically determine which language a text string is written in.  Supports Danish (DAN), German (DEU), English (ENG), French (FRA), Italian (ITA), Japanese (JPN), Korean (KOR), Dutch (NLD), Norwegian (NOR), Portuguese (POR), Russian (RUS), Spanish (SPA), Swedish (SWE), Chinese (ZHO).
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="textToDetect">Text to detect language of</param>
+        /// <param name="input"></param>
         /// <returns>ApiResponse of LanguageDetectionResponse</returns>
-        public ApiResponse< LanguageDetectionResponse > LanguageDetectionPostWithHttpInfo (string textToDetect)
+        public ApiResponse< LanguageDetectionResponse > LanguageDetectionGetLanguageWithHttpInfo (LanguageDetectionRequest input)
         {
-            // verify the required parameter 'textToDetect' is set
-            if (textToDetect == null)
-                throw new ApiException(400, "Missing required parameter 'textToDetect' when calling LanguageDetectionApi->LanguageDetectionPost");
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling LanguageDetectionApi->LanguageDetectionGetLanguage");
 
-            var localVarPath = "/nlp/language/detect";
+            var localVarPath = "/nlp-v2/language/detect";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -221,13 +221,13 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (textToDetect != null && textToDetect.GetType() != typeof(byte[]))
+            if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(textToDetect); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = textToDetect; // byte array
+                localVarPostBody = input; // byte array
             }
 
             // authentication (Apikey) required
@@ -245,7 +245,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("LanguageDetectionPost", localVarResponse);
+                Exception exception = ExceptionFactory("LanguageDetectionGetLanguage", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -258,11 +258,11 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// Detect language of text Automatically determine which language a text string is written in.  Supports Danish (DAN), German (DEU), English (ENG), French (FRA), Italian (ITA), Japanese (JPN), Korean (KOR), Dutch (NLD), Norwegian (NOR), Portuguese (POR), Russian (RUS), Spanish (SPA), Swedish (SWE), Chinese (ZHO).
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="textToDetect">Text to detect language of</param>
+        /// <param name="input"></param>
         /// <returns>Task of LanguageDetectionResponse</returns>
-        public async System.Threading.Tasks.Task<LanguageDetectionResponse> LanguageDetectionPostAsync (string textToDetect)
+        public async System.Threading.Tasks.Task<LanguageDetectionResponse> LanguageDetectionGetLanguageAsync (LanguageDetectionRequest input)
         {
-             ApiResponse<LanguageDetectionResponse> localVarResponse = await LanguageDetectionPostAsyncWithHttpInfo(textToDetect);
+             ApiResponse<LanguageDetectionResponse> localVarResponse = await LanguageDetectionGetLanguageAsyncWithHttpInfo(input);
              return localVarResponse.Data;
 
         }
@@ -271,15 +271,15 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// Detect language of text Automatically determine which language a text string is written in.  Supports Danish (DAN), German (DEU), English (ENG), French (FRA), Italian (ITA), Japanese (JPN), Korean (KOR), Dutch (NLD), Norwegian (NOR), Portuguese (POR), Russian (RUS), Spanish (SPA), Swedish (SWE), Chinese (ZHO).
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="textToDetect">Text to detect language of</param>
+        /// <param name="input"></param>
         /// <returns>Task of ApiResponse (LanguageDetectionResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<LanguageDetectionResponse>> LanguageDetectionPostAsyncWithHttpInfo (string textToDetect)
+        public async System.Threading.Tasks.Task<ApiResponse<LanguageDetectionResponse>> LanguageDetectionGetLanguageAsyncWithHttpInfo (LanguageDetectionRequest input)
         {
-            // verify the required parameter 'textToDetect' is set
-            if (textToDetect == null)
-                throw new ApiException(400, "Missing required parameter 'textToDetect' when calling LanguageDetectionApi->LanguageDetectionPost");
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling LanguageDetectionApi->LanguageDetectionGetLanguage");
 
-            var localVarPath = "/nlp/language/detect";
+            var localVarPath = "/nlp-v2/language/detect";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -308,13 +308,13 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
             if (localVarHttpHeaderAccept != null)
                 localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
 
-            if (textToDetect != null && textToDetect.GetType() != typeof(byte[]))
+            if (input != null && input.GetType() != typeof(byte[]))
             {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(textToDetect); // http body (model) parameter
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
             }
             else
             {
-                localVarPostBody = textToDetect; // byte array
+                localVarPostBody = input; // byte array
             }
 
             // authentication (Apikey) required
@@ -332,7 +332,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("LanguageDetectionPost", localVarResponse);
+                Exception exception = ExceptionFactory("LanguageDetectionGetLanguage", localVarResponse);
                 if (exception != null) throw exception;
             }
 

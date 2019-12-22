@@ -1,7 +1,7 @@
 /* 
- * nlpapi
+ * nlpapiv2
  *
- * The powerful Natural Language Processing APIs let you perform part of speech tagging, entity identification, sentence parsing, and much more to help you understand the meaning of unstructured text.
+ * The powerful Natural Language Processing APIs (v2) let you perform part of speech tagging, entity identification, sentence parsing, and much more to help you understand the meaning of unstructured text.
  *
  * OpenAPI spec version: v1
  * 
@@ -21,31 +21,10 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public interface ISpellCheckApi : IApiAccessor
+    public interface ISpellcheckApi : IApiAccessor
     {
         #region Synchronous Operations
         /// <summary>
-        /// Spell check word
-        /// </summary>
-        /// <remarks>
-        /// Spell check a word as JSON
-        /// </remarks>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input sentence</param>
-        /// <returns>CheckJsonResponse</returns>
-        CheckJsonResponse SpellCheckCheckJson (string value);
-
-        /// <summary>
-        /// Spell check word
-        /// </summary>
-        /// <remarks>
-        /// Spell check a word as JSON
-        /// </remarks>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input sentence</param>
-        /// <returns>ApiResponse of CheckJsonResponse</returns>
-        ApiResponse<CheckJsonResponse> SpellCheckCheckJsonWithHttpInfo (string value);
-        /// <summary>
         /// Check if sentence is spelled correctly
         /// </summary>
         /// <remarks>
@@ -53,8 +32,8 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Input sentence</param>
-        /// <returns>CheckSentenceJsonResponse</returns>
-        CheckSentenceJsonResponse SpellCheckCheckSentenceJson (string value);
+        /// <returns>CheckSentenceResponse</returns>
+        CheckSentenceResponse SpellcheckCheckSentence (CheckSentenceRequest value);
 
         /// <summary>
         /// Check if sentence is spelled correctly
@@ -64,50 +43,8 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Input sentence</param>
-        /// <returns>ApiResponse of CheckSentenceJsonResponse</returns>
-        ApiResponse<CheckSentenceJsonResponse> SpellCheckCheckSentenceJsonWithHttpInfo (string value);
-        /// <summary>
-        /// Spell check a sentence
-        /// </summary>
-        /// <remarks>
-        /// Check if a sentence is spelled correctly
-        /// </remarks>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input sentence word</param>
-        /// <returns>bool?</returns>
-        bool? SpellCheckCheckSentenceString (string value);
-
-        /// <summary>
-        /// Spell check a sentence
-        /// </summary>
-        /// <remarks>
-        /// Check if a sentence is spelled correctly
-        /// </remarks>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input sentence word</param>
-        /// <returns>ApiResponse of bool?</returns>
-        ApiResponse<bool?> SpellCheckCheckSentenceStringWithHttpInfo (string value);
-        /// <summary>
-        /// Find spelling corrections
-        /// </summary>
-        /// <remarks>
-        /// Find the spelling corrections for a word
-        /// </remarks>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input word</param>
-        /// <returns>string</returns>
-        string SpellCheckCorrect (string value);
-
-        /// <summary>
-        /// Find spelling corrections
-        /// </summary>
-        /// <remarks>
-        /// Find the spelling corrections for a word
-        /// </remarks>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input word</param>
-        /// <returns>ApiResponse of string</returns>
-        ApiResponse<string> SpellCheckCorrectWithHttpInfo (string value);
+        /// <returns>ApiResponse of CheckSentenceResponse</returns>
+        ApiResponse<CheckSentenceResponse> SpellcheckCheckSentenceWithHttpInfo (CheckSentenceRequest value);
         /// <summary>
         /// Find spelling corrections
         /// </summary>
@@ -116,8 +53,8 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Input string</param>
-        /// <returns>CorrectJsonResponse</returns>
-        CorrectJsonResponse SpellCheckCorrectJson (string value);
+        /// <returns>CheckWordResponse</returns>
+        CheckWordResponse SpellcheckCorrectJson (CheckWordRequest value);
 
         /// <summary>
         /// Find spelling corrections
@@ -127,53 +64,11 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Input string</param>
-        /// <returns>ApiResponse of CorrectJsonResponse</returns>
-        ApiResponse<CorrectJsonResponse> SpellCheckCorrectJsonWithHttpInfo (string value);
-        /// <summary>
-        /// Spell check a word
-        /// </summary>
-        /// <remarks>
-        /// Check if a word is spelled correctly
-        /// </remarks>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input string word</param>
-        /// <returns>bool?</returns>
-        bool? SpellCheckPost (string value);
-
-        /// <summary>
-        /// Spell check a word
-        /// </summary>
-        /// <remarks>
-        /// Check if a word is spelled correctly
-        /// </remarks>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input string word</param>
-        /// <returns>ApiResponse of bool?</returns>
-        ApiResponse<bool?> SpellCheckPostWithHttpInfo (string value);
+        /// <returns>ApiResponse of CheckWordResponse</returns>
+        ApiResponse<CheckWordResponse> SpellcheckCorrectJsonWithHttpInfo (CheckWordRequest value);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
-        /// Spell check word
-        /// </summary>
-        /// <remarks>
-        /// Spell check a word as JSON
-        /// </remarks>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input sentence</param>
-        /// <returns>Task of CheckJsonResponse</returns>
-        System.Threading.Tasks.Task<CheckJsonResponse> SpellCheckCheckJsonAsync (string value);
-
-        /// <summary>
-        /// Spell check word
-        /// </summary>
-        /// <remarks>
-        /// Spell check a word as JSON
-        /// </remarks>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input sentence</param>
-        /// <returns>Task of ApiResponse (CheckJsonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CheckJsonResponse>> SpellCheckCheckJsonAsyncWithHttpInfo (string value);
-        /// <summary>
         /// Check if sentence is spelled correctly
         /// </summary>
         /// <remarks>
@@ -181,8 +76,8 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Input sentence</param>
-        /// <returns>Task of CheckSentenceJsonResponse</returns>
-        System.Threading.Tasks.Task<CheckSentenceJsonResponse> SpellCheckCheckSentenceJsonAsync (string value);
+        /// <returns>Task of CheckSentenceResponse</returns>
+        System.Threading.Tasks.Task<CheckSentenceResponse> SpellcheckCheckSentenceAsync (CheckSentenceRequest value);
 
         /// <summary>
         /// Check if sentence is spelled correctly
@@ -192,50 +87,8 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Input sentence</param>
-        /// <returns>Task of ApiResponse (CheckSentenceJsonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CheckSentenceJsonResponse>> SpellCheckCheckSentenceJsonAsyncWithHttpInfo (string value);
-        /// <summary>
-        /// Spell check a sentence
-        /// </summary>
-        /// <remarks>
-        /// Check if a sentence is spelled correctly
-        /// </remarks>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input sentence word</param>
-        /// <returns>Task of bool?</returns>
-        System.Threading.Tasks.Task<bool?> SpellCheckCheckSentenceStringAsync (string value);
-
-        /// <summary>
-        /// Spell check a sentence
-        /// </summary>
-        /// <remarks>
-        /// Check if a sentence is spelled correctly
-        /// </remarks>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input sentence word</param>
-        /// <returns>Task of ApiResponse (bool?)</returns>
-        System.Threading.Tasks.Task<ApiResponse<bool?>> SpellCheckCheckSentenceStringAsyncWithHttpInfo (string value);
-        /// <summary>
-        /// Find spelling corrections
-        /// </summary>
-        /// <remarks>
-        /// Find the spelling corrections for a word
-        /// </remarks>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input word</param>
-        /// <returns>Task of string</returns>
-        System.Threading.Tasks.Task<string> SpellCheckCorrectAsync (string value);
-
-        /// <summary>
-        /// Find spelling corrections
-        /// </summary>
-        /// <remarks>
-        /// Find the spelling corrections for a word
-        /// </remarks>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input word</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        System.Threading.Tasks.Task<ApiResponse<string>> SpellCheckCorrectAsyncWithHttpInfo (string value);
+        /// <returns>Task of ApiResponse (CheckSentenceResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CheckSentenceResponse>> SpellcheckCheckSentenceAsyncWithHttpInfo (CheckSentenceRequest value);
         /// <summary>
         /// Find spelling corrections
         /// </summary>
@@ -244,8 +97,8 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Input string</param>
-        /// <returns>Task of CorrectJsonResponse</returns>
-        System.Threading.Tasks.Task<CorrectJsonResponse> SpellCheckCorrectJsonAsync (string value);
+        /// <returns>Task of CheckWordResponse</returns>
+        System.Threading.Tasks.Task<CheckWordResponse> SpellcheckCorrectJsonAsync (CheckWordRequest value);
 
         /// <summary>
         /// Find spelling corrections
@@ -255,44 +108,23 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// </remarks>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Input string</param>
-        /// <returns>Task of ApiResponse (CorrectJsonResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<CorrectJsonResponse>> SpellCheckCorrectJsonAsyncWithHttpInfo (string value);
-        /// <summary>
-        /// Spell check a word
-        /// </summary>
-        /// <remarks>
-        /// Check if a word is spelled correctly
-        /// </remarks>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input string word</param>
-        /// <returns>Task of bool?</returns>
-        System.Threading.Tasks.Task<bool?> SpellCheckPostAsync (string value);
-
-        /// <summary>
-        /// Spell check a word
-        /// </summary>
-        /// <remarks>
-        /// Check if a word is spelled correctly
-        /// </remarks>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input string word</param>
-        /// <returns>Task of ApiResponse (bool?)</returns>
-        System.Threading.Tasks.Task<ApiResponse<bool?>> SpellCheckPostAsyncWithHttpInfo (string value);
+        /// <returns>Task of ApiResponse (CheckWordResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<CheckWordResponse>> SpellcheckCorrectJsonAsyncWithHttpInfo (CheckWordRequest value);
         #endregion Asynchronous Operations
     }
 
     /// <summary>
     /// Represents a collection of functions to interact with the API endpoints
     /// </summary>
-    public partial class SpellCheckApi : ISpellCheckApi
+    public partial class SpellcheckApi : ISpellcheckApi
     {
         private Cloudmersive.APIClient.NET.NLP.Client.ExceptionFactory _exceptionFactory = (name, response) => null;
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SpellCheckApi"/> class.
+        /// Initializes a new instance of the <see cref="SpellcheckApi"/> class.
         /// </summary>
         /// <returns></returns>
-        public SpellCheckApi(String basePath)
+        public SpellcheckApi(String basePath)
         {
             this.Configuration = new Cloudmersive.APIClient.NET.NLP.Client.Configuration { BasePath = basePath };
 
@@ -300,12 +132,12 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         }
 
         /// <summary>
-        /// Initializes a new instance of the <see cref="SpellCheckApi"/> class
+        /// Initializes a new instance of the <see cref="SpellcheckApi"/> class
         /// using Configuration object
         /// </summary>
         /// <param name="configuration">An instance of Configuration</param>
         /// <returns></returns>
-        public SpellCheckApi(Cloudmersive.APIClient.NET.NLP.Client.Configuration configuration = null)
+        public SpellcheckApi(Cloudmersive.APIClient.NET.NLP.Client.Configuration configuration = null)
         {
             if (configuration == null) // use the default one in Configuration
                 this.Configuration = Cloudmersive.APIClient.NET.NLP.Client.Configuration.Default;
@@ -379,30 +211,30 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         }
 
         /// <summary>
-        /// Spell check word Spell check a word as JSON
+        /// Check if sentence is spelled correctly Checks whether the sentence is spelled correctly and returns the result as JSON
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Input sentence</param>
-        /// <returns>CheckJsonResponse</returns>
-        public CheckJsonResponse SpellCheckCheckJson (string value)
+        /// <returns>CheckSentenceResponse</returns>
+        public CheckSentenceResponse SpellcheckCheckSentence (CheckSentenceRequest value)
         {
-             ApiResponse<CheckJsonResponse> localVarResponse = SpellCheckCheckJsonWithHttpInfo(value);
+             ApiResponse<CheckSentenceResponse> localVarResponse = SpellcheckCheckSentenceWithHttpInfo(value);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Spell check word Spell check a word as JSON
+        /// Check if sentence is spelled correctly Checks whether the sentence is spelled correctly and returns the result as JSON
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Input sentence</param>
-        /// <returns>ApiResponse of CheckJsonResponse</returns>
-        public ApiResponse< CheckJsonResponse > SpellCheckCheckJsonWithHttpInfo (string value)
+        /// <returns>ApiResponse of CheckSentenceResponse</returns>
+        public ApiResponse< CheckSentenceResponse > SpellcheckCheckSentenceWithHttpInfo (CheckSentenceRequest value)
         {
             // verify the required parameter 'value' is set
             if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling SpellCheckApi->SpellCheckCheckJson");
+                throw new ApiException(400, "Missing required parameter 'value' when calling SpellcheckApi->SpellcheckCheckSentence");
 
-            var localVarPath = "/nlp/spellcheck/check/word/json";
+            var localVarPath = "/nlp-v2/spellcheck/check/sentence";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -455,100 +287,13 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SpellCheckCheckJson", localVarResponse);
+                Exception exception = ExceptionFactory("SpellcheckCheckSentence", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CheckJsonResponse>(localVarStatusCode,
+            return new ApiResponse<CheckSentenceResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CheckJsonResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CheckJsonResponse)));
-        }
-
-        /// <summary>
-        /// Spell check word Spell check a word as JSON
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input sentence</param>
-        /// <returns>Task of CheckJsonResponse</returns>
-        public async System.Threading.Tasks.Task<CheckJsonResponse> SpellCheckCheckJsonAsync (string value)
-        {
-             ApiResponse<CheckJsonResponse> localVarResponse = await SpellCheckCheckJsonAsyncWithHttpInfo(value);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Spell check word Spell check a word as JSON
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input sentence</param>
-        /// <returns>Task of ApiResponse (CheckJsonResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CheckJsonResponse>> SpellCheckCheckJsonAsyncWithHttpInfo (string value)
-        {
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling SpellCheckApi->SpellCheckCheckJson");
-
-            var localVarPath = "/nlp/spellcheck/check/word/json";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (value != null && value.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = value; // byte array
-            }
-
-            // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
-            {
-                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("SpellCheckCheckJson", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<CheckJsonResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CheckJsonResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CheckJsonResponse)));
+                (CheckSentenceResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CheckSentenceResponse)));
         }
 
         /// <summary>
@@ -556,96 +301,10 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Input sentence</param>
-        /// <returns>CheckSentenceJsonResponse</returns>
-        public CheckSentenceJsonResponse SpellCheckCheckSentenceJson (string value)
+        /// <returns>Task of CheckSentenceResponse</returns>
+        public async System.Threading.Tasks.Task<CheckSentenceResponse> SpellcheckCheckSentenceAsync (CheckSentenceRequest value)
         {
-             ApiResponse<CheckSentenceJsonResponse> localVarResponse = SpellCheckCheckSentenceJsonWithHttpInfo(value);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Check if sentence is spelled correctly Checks whether the sentence is spelled correctly and returns the result as JSON
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input sentence</param>
-        /// <returns>ApiResponse of CheckSentenceJsonResponse</returns>
-        public ApiResponse< CheckSentenceJsonResponse > SpellCheckCheckSentenceJsonWithHttpInfo (string value)
-        {
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling SpellCheckApi->SpellCheckCheckSentenceJson");
-
-            var localVarPath = "/nlp/spellcheck/check/sentence/json";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (value != null && value.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = value; // byte array
-            }
-
-            // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
-            {
-                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("SpellCheckCheckSentenceJson", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<CheckSentenceJsonResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CheckSentenceJsonResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CheckSentenceJsonResponse)));
-        }
-
-        /// <summary>
-        /// Check if sentence is spelled correctly Checks whether the sentence is spelled correctly and returns the result as JSON
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input sentence</param>
-        /// <returns>Task of CheckSentenceJsonResponse</returns>
-        public async System.Threading.Tasks.Task<CheckSentenceJsonResponse> SpellCheckCheckSentenceJsonAsync (string value)
-        {
-             ApiResponse<CheckSentenceJsonResponse> localVarResponse = await SpellCheckCheckSentenceJsonAsyncWithHttpInfo(value);
+             ApiResponse<CheckSentenceResponse> localVarResponse = await SpellcheckCheckSentenceAsyncWithHttpInfo(value);
              return localVarResponse.Data;
 
         }
@@ -655,14 +314,14 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="value">Input sentence</param>
-        /// <returns>Task of ApiResponse (CheckSentenceJsonResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CheckSentenceJsonResponse>> SpellCheckCheckSentenceJsonAsyncWithHttpInfo (string value)
+        /// <returns>Task of ApiResponse (CheckSentenceResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CheckSentenceResponse>> SpellcheckCheckSentenceAsyncWithHttpInfo (CheckSentenceRequest value)
         {
             // verify the required parameter 'value' is set
             if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling SpellCheckApi->SpellCheckCheckSentenceJson");
+                throw new ApiException(400, "Missing required parameter 'value' when calling SpellcheckApi->SpellcheckCheckSentence");
 
-            var localVarPath = "/nlp/spellcheck/check/sentence/json";
+            var localVarPath = "/nlp-v2/spellcheck/check/sentence";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -715,40 +374,40 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SpellCheckCheckSentenceJson", localVarResponse);
+                Exception exception = ExceptionFactory("SpellcheckCheckSentence", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<CheckSentenceJsonResponse>(localVarStatusCode,
+            return new ApiResponse<CheckSentenceResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CheckSentenceJsonResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CheckSentenceJsonResponse)));
+                (CheckSentenceResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CheckSentenceResponse)));
         }
 
         /// <summary>
-        /// Spell check a sentence Check if a sentence is spelled correctly
+        /// Find spelling corrections Find spelling correction suggestions and return result as JSON
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input sentence word</param>
-        /// <returns>bool?</returns>
-        public bool? SpellCheckCheckSentenceString (string value)
+        /// <param name="value">Input string</param>
+        /// <returns>CheckWordResponse</returns>
+        public CheckWordResponse SpellcheckCorrectJson (CheckWordRequest value)
         {
-             ApiResponse<bool?> localVarResponse = SpellCheckCheckSentenceStringWithHttpInfo(value);
+             ApiResponse<CheckWordResponse> localVarResponse = SpellcheckCorrectJsonWithHttpInfo(value);
              return localVarResponse.Data;
         }
 
         /// <summary>
-        /// Spell check a sentence Check if a sentence is spelled correctly
+        /// Find spelling corrections Find spelling correction suggestions and return result as JSON
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input sentence word</param>
-        /// <returns>ApiResponse of bool?</returns>
-        public ApiResponse< bool? > SpellCheckCheckSentenceStringWithHttpInfo (string value)
+        /// <param name="value">Input string</param>
+        /// <returns>ApiResponse of CheckWordResponse</returns>
+        public ApiResponse< CheckWordResponse > SpellcheckCorrectJsonWithHttpInfo (CheckWordRequest value)
         {
             // verify the required parameter 'value' is set
             if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling SpellCheckApi->SpellCheckCheckSentenceString");
+                throw new ApiException(400, "Missing required parameter 'value' when calling SpellcheckApi->SpellcheckCorrectJson");
 
-            var localVarPath = "/nlp/spellcheck/check/sentence/string";
+            var localVarPath = "/nlp-v2/spellcheck/check/word";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -801,41 +460,41 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SpellCheckCheckSentenceString", localVarResponse);
+                Exception exception = ExceptionFactory("SpellcheckCorrectJson", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<bool?>(localVarStatusCode,
+            return new ApiResponse<CheckWordResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (bool?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(bool?)));
+                (CheckWordResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CheckWordResponse)));
         }
 
         /// <summary>
-        /// Spell check a sentence Check if a sentence is spelled correctly
+        /// Find spelling corrections Find spelling correction suggestions and return result as JSON
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input sentence word</param>
-        /// <returns>Task of bool?</returns>
-        public async System.Threading.Tasks.Task<bool?> SpellCheckCheckSentenceStringAsync (string value)
+        /// <param name="value">Input string</param>
+        /// <returns>Task of CheckWordResponse</returns>
+        public async System.Threading.Tasks.Task<CheckWordResponse> SpellcheckCorrectJsonAsync (CheckWordRequest value)
         {
-             ApiResponse<bool?> localVarResponse = await SpellCheckCheckSentenceStringAsyncWithHttpInfo(value);
+             ApiResponse<CheckWordResponse> localVarResponse = await SpellcheckCorrectJsonAsyncWithHttpInfo(value);
              return localVarResponse.Data;
 
         }
 
         /// <summary>
-        /// Spell check a sentence Check if a sentence is spelled correctly
+        /// Find spelling corrections Find spelling correction suggestions and return result as JSON
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input sentence word</param>
-        /// <returns>Task of ApiResponse (bool?)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<bool?>> SpellCheckCheckSentenceStringAsyncWithHttpInfo (string value)
+        /// <param name="value">Input string</param>
+        /// <returns>Task of ApiResponse (CheckWordResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<CheckWordResponse>> SpellcheckCorrectJsonAsyncWithHttpInfo (CheckWordRequest value)
         {
             // verify the required parameter 'value' is set
             if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling SpellCheckApi->SpellCheckCheckSentenceString");
+                throw new ApiException(400, "Missing required parameter 'value' when calling SpellcheckApi->SpellcheckCorrectJson");
 
-            var localVarPath = "/nlp/spellcheck/check/sentence/string";
+            var localVarPath = "/nlp-v2/spellcheck/check/word";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -888,532 +547,13 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("SpellCheckCheckSentenceString", localVarResponse);
+                Exception exception = ExceptionFactory("SpellcheckCorrectJson", localVarResponse);
                 if (exception != null) throw exception;
             }
 
-            return new ApiResponse<bool?>(localVarStatusCode,
+            return new ApiResponse<CheckWordResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (bool?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(bool?)));
-        }
-
-        /// <summary>
-        /// Find spelling corrections Find the spelling corrections for a word
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input word</param>
-        /// <returns>string</returns>
-        public string SpellCheckCorrect (string value)
-        {
-             ApiResponse<string> localVarResponse = SpellCheckCorrectWithHttpInfo(value);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Find spelling corrections Find the spelling corrections for a word
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input word</param>
-        /// <returns>ApiResponse of string</returns>
-        public ApiResponse< string > SpellCheckCorrectWithHttpInfo (string value)
-        {
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling SpellCheckApi->SpellCheckCorrect");
-
-            var localVarPath = "/nlp/spellcheck/correct/word/string";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (value != null && value.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = value; // byte array
-            }
-
-            // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
-            {
-                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("SpellCheckCorrect", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-        }
-
-        /// <summary>
-        /// Find spelling corrections Find the spelling corrections for a word
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input word</param>
-        /// <returns>Task of string</returns>
-        public async System.Threading.Tasks.Task<string> SpellCheckCorrectAsync (string value)
-        {
-             ApiResponse<string> localVarResponse = await SpellCheckCorrectAsyncWithHttpInfo(value);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Find spelling corrections Find the spelling corrections for a word
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input word</param>
-        /// <returns>Task of ApiResponse (string)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<string>> SpellCheckCorrectAsyncWithHttpInfo (string value)
-        {
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling SpellCheckApi->SpellCheckCorrect");
-
-            var localVarPath = "/nlp/spellcheck/correct/word/string";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (value != null && value.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = value; // byte array
-            }
-
-            // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
-            {
-                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("SpellCheckCorrect", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<string>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (string) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(string)));
-        }
-
-        /// <summary>
-        /// Find spelling corrections Find spelling correction suggestions and return result as JSON
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input string</param>
-        /// <returns>CorrectJsonResponse</returns>
-        public CorrectJsonResponse SpellCheckCorrectJson (string value)
-        {
-             ApiResponse<CorrectJsonResponse> localVarResponse = SpellCheckCorrectJsonWithHttpInfo(value);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Find spelling corrections Find spelling correction suggestions and return result as JSON
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input string</param>
-        /// <returns>ApiResponse of CorrectJsonResponse</returns>
-        public ApiResponse< CorrectJsonResponse > SpellCheckCorrectJsonWithHttpInfo (string value)
-        {
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling SpellCheckApi->SpellCheckCorrectJson");
-
-            var localVarPath = "/nlp/spellcheck/correct/word/json";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (value != null && value.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = value; // byte array
-            }
-
-            // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
-            {
-                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("SpellCheckCorrectJson", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<CorrectJsonResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CorrectJsonResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CorrectJsonResponse)));
-        }
-
-        /// <summary>
-        /// Find spelling corrections Find spelling correction suggestions and return result as JSON
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input string</param>
-        /// <returns>Task of CorrectJsonResponse</returns>
-        public async System.Threading.Tasks.Task<CorrectJsonResponse> SpellCheckCorrectJsonAsync (string value)
-        {
-             ApiResponse<CorrectJsonResponse> localVarResponse = await SpellCheckCorrectJsonAsyncWithHttpInfo(value);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Find spelling corrections Find spelling correction suggestions and return result as JSON
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input string</param>
-        /// <returns>Task of ApiResponse (CorrectJsonResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<CorrectJsonResponse>> SpellCheckCorrectJsonAsyncWithHttpInfo (string value)
-        {
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling SpellCheckApi->SpellCheckCorrectJson");
-
-            var localVarPath = "/nlp/spellcheck/correct/word/json";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (value != null && value.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = value; // byte array
-            }
-
-            // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
-            {
-                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("SpellCheckCorrectJson", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<CorrectJsonResponse>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (CorrectJsonResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CorrectJsonResponse)));
-        }
-
-        /// <summary>
-        /// Spell check a word Check if a word is spelled correctly
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input string word</param>
-        /// <returns>bool?</returns>
-        public bool? SpellCheckPost (string value)
-        {
-             ApiResponse<bool?> localVarResponse = SpellCheckPostWithHttpInfo(value);
-             return localVarResponse.Data;
-        }
-
-        /// <summary>
-        /// Spell check a word Check if a word is spelled correctly
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input string word</param>
-        /// <returns>ApiResponse of bool?</returns>
-        public ApiResponse< bool? > SpellCheckPostWithHttpInfo (string value)
-        {
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling SpellCheckApi->SpellCheckPost");
-
-            var localVarPath = "/nlp/spellcheck/check/word/string";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (value != null && value.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = value; // byte array
-            }
-
-            // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
-            {
-                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("SpellCheckPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<bool?>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (bool?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(bool?)));
-        }
-
-        /// <summary>
-        /// Spell check a word Check if a word is spelled correctly
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input string word</param>
-        /// <returns>Task of bool?</returns>
-        public async System.Threading.Tasks.Task<bool?> SpellCheckPostAsync (string value)
-        {
-             ApiResponse<bool?> localVarResponse = await SpellCheckPostAsyncWithHttpInfo(value);
-             return localVarResponse.Data;
-
-        }
-
-        /// <summary>
-        /// Spell check a word Check if a word is spelled correctly
-        /// </summary>
-        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
-        /// <param name="value">Input string word</param>
-        /// <returns>Task of ApiResponse (bool?)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<bool?>> SpellCheckPostAsyncWithHttpInfo (string value)
-        {
-            // verify the required parameter 'value' is set
-            if (value == null)
-                throw new ApiException(400, "Missing required parameter 'value' when calling SpellCheckApi->SpellCheckPost");
-
-            var localVarPath = "/nlp/spellcheck/check/word/string";
-            var localVarPathParams = new Dictionary<String, String>();
-            var localVarQueryParams = new List<KeyValuePair<String, String>>();
-            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
-            var localVarFormParams = new Dictionary<String, String>();
-            var localVarFileParams = new Dictionary<String, FileParameter>();
-            Object localVarPostBody = null;
-
-            // to determine the Content-Type header
-            String[] localVarHttpContentTypes = new String[] {
-                "application/json", 
-                "text/json", 
-                "application/xml", 
-                "text/xml", 
-                "application/x-www-form-urlencoded"
-            };
-            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
-
-            // to determine the Accept header
-            String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
-            };
-            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
-            if (localVarHttpHeaderAccept != null)
-                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
-
-            if (value != null && value.GetType() != typeof(byte[]))
-            {
-                localVarPostBody = this.Configuration.ApiClient.Serialize(value); // http body (model) parameter
-            }
-            else
-            {
-                localVarPostBody = value; // byte array
-            }
-
-            // authentication (Apikey) required
-            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
-            {
-                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
-            }
-
-            // make the HTTP request
-            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
-                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
-                localVarPathParams, localVarHttpContentType);
-
-            int localVarStatusCode = (int) localVarResponse.StatusCode;
-
-            if (ExceptionFactory != null)
-            {
-                Exception exception = ExceptionFactory("SpellCheckPost", localVarResponse);
-                if (exception != null) throw exception;
-            }
-
-            return new ApiResponse<bool?>(localVarStatusCode,
-                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
-                (bool?) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(bool?)));
+                (CheckWordResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(CheckWordResponse)));
         }
 
     }
