@@ -192,7 +192,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
             if (input == null)
                 throw new ApiException(400, "Missing required parameter 'input' when calling ParseApi->ParseParseString");
 
-            var localVarPath = "/nlp/parse/tree";
+            var localVarPath = "/nlp-v2/parse/tree";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
@@ -279,7 +279,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
             if (input == null)
                 throw new ApiException(400, "Missing required parameter 'input' when calling ParseApi->ParseParseString");
 
-            var localVarPath = "/nlp/parse/tree";
+            var localVarPath = "/nlp-v2/parse/tree";
             var localVarPathParams = new Dictionary<String, String>();
             var localVarQueryParams = new List<KeyValuePair<String, String>>();
             var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);

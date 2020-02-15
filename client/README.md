@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 This C# SDK is for the [Cloudmersive Natural Language Processing API](https://www.cloudmersive.com/nlp-api):
 
 - API version: v1
-- SDK version: 4.0.1
+- SDK version: 4.0.2
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -103,7 +103,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ExtractEntitiesApi* | [**ExtractEntitiesPost**](docs/ExtractEntitiesApi.md#extractentitiespost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *LanguageDetectionApi* | [**LanguageDetectionGetLanguage**](docs/LanguageDetectionApi.md#languagedetectiongetlanguage) | **POST** /nlp-v2/language/detect | Detect language of text
-*ParseApi* | [**ParseParseString**](docs/ParseApi.md#parseparsestring) | **POST** /nlp/parse/tree | Parse string to syntax tree
+*ParseApi* | [**ParseParseString**](docs/ParseApi.md#parseparsestring) | **POST** /nlp-v2/parse/tree | Parse string to syntax tree
 *PosTaggerApi* | [**PosTaggerTagAdjectives**](docs/PosTaggerApi.md#postaggertagadjectives) | **POST** /nlp-v2/pos/tag/adjectives | Part-of-speech tag a string, filter to adjectives
 *PosTaggerApi* | [**PosTaggerTagAdverbs**](docs/PosTaggerApi.md#postaggertagadverbs) | **POST** /nlp-v2/pos/tag/adverbs | Part-of-speech tag a string, filter to adverbs
 *PosTaggerApi* | [**PosTaggerTagNouns**](docs/PosTaggerApi.md#postaggertagnouns) | **POST** /nlp-v2/pos/tag/nouns | Part-of-speech tag a string, filter to nouns
