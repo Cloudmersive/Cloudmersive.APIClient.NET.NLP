@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 This C# SDK is for the [Cloudmersive Natural Language Processing API](https://www.cloudmersive.com/nlp-api):
 
 - API version: v1
-- SDK version: 4.0.2
+- SDK version: 4.0.3
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -103,6 +103,8 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *ExtractEntitiesApi* | [**ExtractEntitiesPost**](docs/ExtractEntitiesApi.md#extractentitiespost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *LanguageDetectionApi* | [**LanguageDetectionGetLanguage**](docs/LanguageDetectionApi.md#languagedetectiongetlanguage) | **POST** /nlp-v2/language/detect | Detect language of text
+*LanguageTranslationApi* | [**LanguageTranslationTranslateDeuToEng**](docs/LanguageTranslationApi.md#languagetranslationtranslatedeutoeng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
+*LanguageTranslationApi* | [**LanguageTranslationTranslateEngToDeu**](docs/LanguageTranslationApi.md#languagetranslationtranslateengtodeu) | **POST** /nlp-v2/translate/language/eng/to/deu | Translate English to German text with Deep Learning AI
 *ParseApi* | [**ParseParseString**](docs/ParseApi.md#parseparsestring) | **POST** /nlp-v2/parse/tree | Parse string to syntax tree
 *PosTaggerApi* | [**PosTaggerTagAdjectives**](docs/PosTaggerApi.md#postaggertagadjectives) | **POST** /nlp-v2/pos/tag/adjectives | Part-of-speech tag a string, filter to adjectives
 *PosTaggerApi* | [**PosTaggerTagAdverbs**](docs/PosTaggerApi.md#postaggertagadverbs) | **POST** /nlp-v2/pos/tag/adverbs | Part-of-speech tag a string, filter to adverbs
@@ -110,6 +112,7 @@ Class | Method | HTTP request | Description
 *PosTaggerApi* | [**PosTaggerTagPronouns**](docs/PosTaggerApi.md#postaggertagpronouns) | **POST** /nlp-v2/pos/tag/pronouns | Part-of-speech tag a string, filter to pronouns
 *PosTaggerApi* | [**PosTaggerTagSentence**](docs/PosTaggerApi.md#postaggertagsentence) | **POST** /nlp-v2/pos/tag/sentence | Part-of-speech tag a string
 *PosTaggerApi* | [**PosTaggerTagVerbs**](docs/PosTaggerApi.md#postaggertagverbs) | **POST** /nlp-v2/pos/tag/verbs | Part-of-speech tag a string, filter to verbs
+*RephraseApi* | [**RephraseTranslateDeuToEng**](docs/RephraseApi.md#rephrasetranslatedeutoeng) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
 *SegmentationApi* | [**SegmentationGetSentences**](docs/SegmentationApi.md#segmentationgetsentences) | **POST** /nlp-v2/segmentation/sentences | Extract sentences from string
 *SegmentationApi* | [**SegmentationGetWords**](docs/SegmentationApi.md#segmentationgetwords) | **POST** /nlp-v2/segmentation/words | Get words in input string
 *SpellcheckApi* | [**SpellcheckCheckSentence**](docs/SpellcheckApi.md#spellcheckchecksentence) | **POST** /nlp-v2/spellcheck/check/sentence | Check if sentence is spelled correctly
@@ -131,12 +134,18 @@ Class | Method | HTTP request | Description
  - [Model.GetWordsResponse](docs/GetWordsResponse.md)
  - [Model.LanguageDetectionRequest](docs/LanguageDetectionRequest.md)
  - [Model.LanguageDetectionResponse](docs/LanguageDetectionResponse.md)
+ - [Model.LanguageTranslationRequest](docs/LanguageTranslationRequest.md)
+ - [Model.LanguageTranslationResponse](docs/LanguageTranslationResponse.md)
  - [Model.ParseRequest](docs/ParseRequest.md)
  - [Model.ParseResponse](docs/ParseResponse.md)
  - [Model.PosRequest](docs/PosRequest.md)
  - [Model.PosResponse](docs/PosResponse.md)
  - [Model.PosSentence](docs/PosSentence.md)
  - [Model.PosTaggedWord](docs/PosTaggedWord.md)
+ - [Model.RephraseRequest](docs/RephraseRequest.md)
+ - [Model.RephraseResponse](docs/RephraseResponse.md)
+ - [Model.RephrasedSentence](docs/RephrasedSentence.md)
+ - [Model.RephrasedSentenceOption](docs/RephrasedSentenceOption.md)
  - [Model.SentenceSegmentationRequest](docs/SentenceSegmentationRequest.md)
  - [Model.SentenceSegmentationResponse](docs/SentenceSegmentationResponse.md)
  - [Model.WordPosition](docs/WordPosition.md)
