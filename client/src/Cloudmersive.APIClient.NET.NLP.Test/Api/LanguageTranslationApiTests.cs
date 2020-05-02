@@ -88,6 +88,30 @@ namespace Cloudmersive.APIClient.NET.NLP.Test
             //Assert.IsInstanceOf<LanguageTranslationResponse> (response, "response is LanguageTranslationResponse");
         }
         
+        /// <summary>
+        /// Test LanguageTranslationTranslateEngToRus
+        /// </summary>
+        [Test]
+        public void LanguageTranslationTranslateEngToRusTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //LanguageTranslationRequest input = null;
+            //var response = instance.LanguageTranslationTranslateEngToRus(input);
+            //Assert.IsInstanceOf<LanguageTranslationResponse> (response, "response is LanguageTranslationResponse");
+        }
+        
+        /// <summary>
+        /// Test LanguageTranslationTranslateRusToEng
+        /// </summary>
+        [Test]
+        public void LanguageTranslationTranslateRusToEngTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //LanguageTranslationRequest input = null;
+            //var response = instance.LanguageTranslationTranslateRusToEng(input);
+            //Assert.IsInstanceOf<LanguageTranslationResponse> (response, "response is LanguageTranslationResponse");
+        }
+        
     }
 
 }

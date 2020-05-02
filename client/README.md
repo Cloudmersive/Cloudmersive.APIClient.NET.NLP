@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 This C# SDK is for the [Cloudmersive Natural Language Processing API](https://www.cloudmersive.com/nlp-api):
 
 - API version: v1
-- SDK version: 4.0.3
+- SDK version: 4.0.4
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -105,6 +105,8 @@ Class | Method | HTTP request | Description
 *LanguageDetectionApi* | [**LanguageDetectionGetLanguage**](docs/LanguageDetectionApi.md#languagedetectiongetlanguage) | **POST** /nlp-v2/language/detect | Detect language of text
 *LanguageTranslationApi* | [**LanguageTranslationTranslateDeuToEng**](docs/LanguageTranslationApi.md#languagetranslationtranslatedeutoeng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
 *LanguageTranslationApi* | [**LanguageTranslationTranslateEngToDeu**](docs/LanguageTranslationApi.md#languagetranslationtranslateengtodeu) | **POST** /nlp-v2/translate/language/eng/to/deu | Translate English to German text with Deep Learning AI
+*LanguageTranslationApi* | [**LanguageTranslationTranslateEngToRus**](docs/LanguageTranslationApi.md#languagetranslationtranslateengtorus) | **POST** /nlp-v2/translate/language/eng/to/rus | Translate English to Russian text with Deep Learning AI
+*LanguageTranslationApi* | [**LanguageTranslationTranslateRusToEng**](docs/LanguageTranslationApi.md#languagetranslationtranslaterustoeng) | **POST** /nlp-v2/translate/language/rus/to/eng | Translate Russian to English text with Deep Learning AI
 *ParseApi* | [**ParseParseString**](docs/ParseApi.md#parseparsestring) | **POST** /nlp-v2/parse/tree | Parse string to syntax tree
 *PosTaggerApi* | [**PosTaggerTagAdjectives**](docs/PosTaggerApi.md#postaggertagadjectives) | **POST** /nlp-v2/pos/tag/adjectives | Part-of-speech tag a string, filter to adjectives
 *PosTaggerApi* | [**PosTaggerTagAdverbs**](docs/PosTaggerApi.md#postaggertagadverbs) | **POST** /nlp-v2/pos/tag/adverbs | Part-of-speech tag a string, filter to adverbs
