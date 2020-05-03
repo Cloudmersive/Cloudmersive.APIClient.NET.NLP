@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 This C# SDK is for the [Cloudmersive Natural Language Processing API](https://www.cloudmersive.com/nlp-api):
 
 - API version: v1
-- SDK version: 4.0.4
+- SDK version: 4.0.5
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -75,18 +75,18 @@ namespace Example
             // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
             // Configuration.Default.ApiKeyPrefix.Add("Apikey", "Bearer");
 
-            var apiInstance = new ExtractEntitiesApi();
-            var value = new ExtractEntitiesRequest(); // ExtractEntitiesRequest | Input string
+            var apiInstance = new AnalyticsApi();
+            var input = new SentimentAnalysisRequest(); // SentimentAnalysisRequest | Input sentiment analysis request
 
             try
             {
-                // Extract entities from string
-                ExtractEntitiesResponse result = apiInstance.ExtractEntitiesPost(value);
+                // Perform Sentiment Analysis and Classification on Text
+                SentimentAnalysisResponse result = apiInstance.AnalyticsSentiment(input);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling ExtractEntitiesApi.ExtractEntitiesPost: " + e.Message );
+                Debug.Print("Exception when calling AnalyticsApi.AnalyticsSentiment: " + e.Message );
             }
 
         }
@@ -101,6 +101,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AnalyticsApi* | [**AnalyticsSentiment**](docs/AnalyticsApi.md#analyticssentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
 *ExtractEntitiesApi* | [**ExtractEntitiesPost**](docs/ExtractEntitiesApi.md#extractentitiespost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *LanguageDetectionApi* | [**LanguageDetectionGetLanguage**](docs/LanguageDetectionApi.md#languagedetectiongetlanguage) | **POST** /nlp-v2/language/detect | Detect language of text
 *LanguageTranslationApi* | [**LanguageTranslationTranslateDeuToEng**](docs/LanguageTranslationApi.md#languagetranslationtranslatedeutoeng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
@@ -150,6 +151,8 @@ Class | Method | HTTP request | Description
  - [Model.RephrasedSentenceOption](docs/RephrasedSentenceOption.md)
  - [Model.SentenceSegmentationRequest](docs/SentenceSegmentationRequest.md)
  - [Model.SentenceSegmentationResponse](docs/SentenceSegmentationResponse.md)
+ - [Model.SentimentAnalysisRequest](docs/SentimentAnalysisRequest.md)
+ - [Model.SentimentAnalysisResponse](docs/SentimentAnalysisResponse.md)
  - [Model.WordPosition](docs/WordPosition.md)
 
 
