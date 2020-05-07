@@ -65,6 +65,18 @@ namespace Cloudmersive.APIClient.NET.NLP.Test
 
         
         /// <summary>
+        /// Test AnalyticsProfanity
+        /// </summary>
+        [Test]
+        public void AnalyticsProfanityTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //ProfanityAnalysisRequest input = null;
+            //var response = instance.AnalyticsProfanity(input);
+            //Assert.IsInstanceOf<ProfanityAnalysisResponse> (response, "response is ProfanityAnalysisResponse");
+        }
+        
+        /// <summary>
         /// Test AnalyticsSentiment
         /// </summary>
         [Test]

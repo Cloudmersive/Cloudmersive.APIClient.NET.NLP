@@ -25,46 +25,37 @@ using SwaggerDateConverter = Cloudmersive.APIClient.NET.NLP.Client.SwaggerDateCo
 namespace Cloudmersive.APIClient.NET.NLP.Model
 {
     /// <summary>
-    /// Output of a sentiment analysis operation
+    /// Output of a profanity analysis operation
     /// </summary>
     [DataContract]
-    public partial class SentimentAnalysisResponse :  IEquatable<SentimentAnalysisResponse>, IValidatableObject
+    public partial class ProfanityAnalysisResponse :  IEquatable<ProfanityAnalysisResponse>, IValidatableObject
     {
         /// <summary>
-        /// Initializes a new instance of the <see cref="SentimentAnalysisResponse" /> class.
+        /// Initializes a new instance of the <see cref="ProfanityAnalysisResponse" /> class.
         /// </summary>
-        /// <param name="successful">True if the sentiment analysis operation was successful, false otherwise.</param>
-        /// <param name="sentimentClassificationResult">Classification of input text into a sentiment classification; possible values are \&quot;Positive\&quot;, \&quot;Negative\&quot; or \&quot;Neutral\&quot;.</param>
-        /// <param name="sentimentScoreResult">Sentiment classification score between -1.0 and +1.0 where scores less than 0 are negative sentiment, scores greater than 0 are positive sentiment and scores close to 0 are neutral.  The greater the value deviates from 0.0 the stronger the sentiment, with +1.0 and -1.0 being maximum positive and negative sentiment, respectively..</param>
+        /// <param name="successful">True if the profanity detection operation was successful, false otherwise.</param>
+        /// <param name="profanityScoreResult">Profanity classification score between 0.0 and 1.0 where scores closer to zero have a low probability of being profane or contain obscene language, while scores close to 1.0 have a high probability of being profane or containing obscene language.  Values above 0.8 have a very high probability of being profane..</param>
         /// <param name="sentenceCount">Number of sentences in input text.</param>
-        public SentimentAnalysisResponse(bool? successful = default(bool?), string sentimentClassificationResult = default(string), double? sentimentScoreResult = default(double?), int? sentenceCount = default(int?))
+        public ProfanityAnalysisResponse(bool? successful = default(bool?), double? profanityScoreResult = default(double?), int? sentenceCount = default(int?))
         {
             this.Successful = successful;
-            this.SentimentClassificationResult = sentimentClassificationResult;
-            this.SentimentScoreResult = sentimentScoreResult;
+            this.ProfanityScoreResult = profanityScoreResult;
             this.SentenceCount = sentenceCount;
         }
         
         /// <summary>
-        /// True if the sentiment analysis operation was successful, false otherwise
+        /// True if the profanity detection operation was successful, false otherwise
         /// </summary>
-        /// <value>True if the sentiment analysis operation was successful, false otherwise</value>
+        /// <value>True if the profanity detection operation was successful, false otherwise</value>
         [DataMember(Name="Successful", EmitDefaultValue=false)]
         public bool? Successful { get; set; }
 
         /// <summary>
-        /// Classification of input text into a sentiment classification; possible values are \&quot;Positive\&quot;, \&quot;Negative\&quot; or \&quot;Neutral\&quot;
+        /// Profanity classification score between 0.0 and 1.0 where scores closer to zero have a low probability of being profane or contain obscene language, while scores close to 1.0 have a high probability of being profane or containing obscene language.  Values above 0.8 have a very high probability of being profane.
         /// </summary>
-        /// <value>Classification of input text into a sentiment classification; possible values are \&quot;Positive\&quot;, \&quot;Negative\&quot; or \&quot;Neutral\&quot;</value>
-        [DataMember(Name="SentimentClassificationResult", EmitDefaultValue=false)]
-        public string SentimentClassificationResult { get; set; }
-
-        /// <summary>
-        /// Sentiment classification score between -1.0 and +1.0 where scores less than 0 are negative sentiment, scores greater than 0 are positive sentiment and scores close to 0 are neutral.  The greater the value deviates from 0.0 the stronger the sentiment, with +1.0 and -1.0 being maximum positive and negative sentiment, respectively.
-        /// </summary>
-        /// <value>Sentiment classification score between -1.0 and +1.0 where scores less than 0 are negative sentiment, scores greater than 0 are positive sentiment and scores close to 0 are neutral.  The greater the value deviates from 0.0 the stronger the sentiment, with +1.0 and -1.0 being maximum positive and negative sentiment, respectively.</value>
-        [DataMember(Name="SentimentScoreResult", EmitDefaultValue=false)]
-        public double? SentimentScoreResult { get; set; }
+        /// <value>Profanity classification score between 0.0 and 1.0 where scores closer to zero have a low probability of being profane or contain obscene language, while scores close to 1.0 have a high probability of being profane or containing obscene language.  Values above 0.8 have a very high probability of being profane.</value>
+        [DataMember(Name="ProfanityScoreResult", EmitDefaultValue=false)]
+        public double? ProfanityScoreResult { get; set; }
 
         /// <summary>
         /// Number of sentences in input text
@@ -80,10 +71,9 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         public override string ToString()
         {
             var sb = new StringBuilder();
-            sb.Append("class SentimentAnalysisResponse {\n");
+            sb.Append("class ProfanityAnalysisResponse {\n");
             sb.Append("  Successful: ").Append(Successful).Append("\n");
-            sb.Append("  SentimentClassificationResult: ").Append(SentimentClassificationResult).Append("\n");
-            sb.Append("  SentimentScoreResult: ").Append(SentimentScoreResult).Append("\n");
+            sb.Append("  ProfanityScoreResult: ").Append(ProfanityScoreResult).Append("\n");
             sb.Append("  SentenceCount: ").Append(SentenceCount).Append("\n");
             sb.Append("}\n");
             return sb.ToString();
@@ -105,15 +95,15 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
         /// <returns>Boolean</returns>
         public override bool Equals(object input)
         {
-            return this.Equals(input as SentimentAnalysisResponse);
+            return this.Equals(input as ProfanityAnalysisResponse);
         }
 
         /// <summary>
-        /// Returns true if SentimentAnalysisResponse instances are equal
+        /// Returns true if ProfanityAnalysisResponse instances are equal
         /// </summary>
-        /// <param name="input">Instance of SentimentAnalysisResponse to be compared</param>
+        /// <param name="input">Instance of ProfanityAnalysisResponse to be compared</param>
         /// <returns>Boolean</returns>
-        public bool Equals(SentimentAnalysisResponse input)
+        public bool Equals(ProfanityAnalysisResponse input)
         {
             if (input == null)
                 return false;
@@ -125,14 +115,9 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
                     this.Successful.Equals(input.Successful))
                 ) && 
                 (
-                    this.SentimentClassificationResult == input.SentimentClassificationResult ||
-                    (this.SentimentClassificationResult != null &&
-                    this.SentimentClassificationResult.Equals(input.SentimentClassificationResult))
-                ) && 
-                (
-                    this.SentimentScoreResult == input.SentimentScoreResult ||
-                    (this.SentimentScoreResult != null &&
-                    this.SentimentScoreResult.Equals(input.SentimentScoreResult))
+                    this.ProfanityScoreResult == input.ProfanityScoreResult ||
+                    (this.ProfanityScoreResult != null &&
+                    this.ProfanityScoreResult.Equals(input.ProfanityScoreResult))
                 ) && 
                 (
                     this.SentenceCount == input.SentenceCount ||
@@ -152,10 +137,8 @@ namespace Cloudmersive.APIClient.NET.NLP.Model
                 int hashCode = 41;
                 if (this.Successful != null)
                     hashCode = hashCode * 59 + this.Successful.GetHashCode();
-                if (this.SentimentClassificationResult != null)
-                    hashCode = hashCode * 59 + this.SentimentClassificationResult.GetHashCode();
-                if (this.SentimentScoreResult != null)
-                    hashCode = hashCode * 59 + this.SentimentScoreResult.GetHashCode();
+                if (this.ProfanityScoreResult != null)
+                    hashCode = hashCode * 59 + this.ProfanityScoreResult.GetHashCode();
                 if (this.SentenceCount != null)
                     hashCode = hashCode * 59 + this.SentenceCount.GetHashCode();
                 return hashCode;
