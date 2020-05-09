@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**AnalyticsProfanity**](AnalyticsApi.md#analyticsprofanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 [**AnalyticsSentiment**](AnalyticsApi.md#analyticssentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
+[**AnalyticsSubjectivity**](AnalyticsApi.md#analyticssubjectivity) | **POST** /nlp-v2/analytics/subjectivity | Perform Subjectivity and Objectivity Analysis on Text
 
 
 <a name="analyticsprofanity"></a>
@@ -128,6 +129,72 @@ Name | Type | Description  | Notes
 ### Return type
 
 [**SentimentAnalysisResponse**](SentimentAnalysisResponse.md)
+
+### Authorization
+
+[Apikey](../README.md#Apikey)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json, text/json, application/xml, text/xml, application/x-www-form-urlencoded
+ - **Accept**: application/json, text/json, application/xml, text/xml
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+<a name="analyticssubjectivity"></a>
+# **AnalyticsSubjectivity**
+> SubjectivityAnalysisResponse AnalyticsSubjectivity (SubjectivityAnalysisRequest input)
+
+Perform Subjectivity and Objectivity Analysis on Text
+
+Analyze input text using advanced Subjectivity and Objectivity Language Analysis to determine if the input text is objective or subjective, and how much.  Supports English language input.  Consumes 1-2 API calls per sentence.
+
+### Example
+```csharp
+using System;
+using System.Diagnostics;
+using Cloudmersive.APIClient.NET.NLP.Api;
+using Cloudmersive.APIClient.NET.NLP.Client;
+using Cloudmersive.APIClient.NET.NLP.Model;
+
+namespace Example
+{
+    public class AnalyticsSubjectivityExample
+    {
+        public void main()
+        {
+            // Configure API key authorization: Apikey
+            Configuration.Default.AddApiKey("Apikey", "YOUR_API_KEY");
+            // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
+            // Configuration.Default.AddApiKeyPrefix("Apikey", "Bearer");
+
+            var apiInstance = new AnalyticsApi();
+            var input = new SubjectivityAnalysisRequest(); // SubjectivityAnalysisRequest | Input subjectivity analysis request
+
+            try
+            {
+                // Perform Subjectivity and Objectivity Analysis on Text
+                SubjectivityAnalysisResponse result = apiInstance.AnalyticsSubjectivity(input);
+                Debug.WriteLine(result);
+            }
+            catch (Exception e)
+            {
+                Debug.Print("Exception when calling AnalyticsApi.AnalyticsSubjectivity: " + e.Message );
+            }
+        }
+    }
+}
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **input** | [**SubjectivityAnalysisRequest**](SubjectivityAnalysisRequest.md)| Input subjectivity analysis request | 
+
+### Return type
+
+[**SubjectivityAnalysisResponse**](SubjectivityAnalysisResponse.md)
 
 ### Authorization
 

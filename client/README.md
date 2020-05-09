@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 This C# SDK is for the [Cloudmersive Natural Language Processing API](https://www.cloudmersive.com/nlp-api):
 
 - API version: v1
-- SDK version: 4.0.6
+- SDK version: 4.0.7
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -103,6 +103,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AnalyticsApi* | [**AnalyticsProfanity**](docs/AnalyticsApi.md#analyticsprofanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 *AnalyticsApi* | [**AnalyticsSentiment**](docs/AnalyticsApi.md#analyticssentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
+*AnalyticsApi* | [**AnalyticsSubjectivity**](docs/AnalyticsApi.md#analyticssubjectivity) | **POST** /nlp-v2/analytics/subjectivity | Perform Subjectivity and Objectivity Analysis on Text
 *ExtractEntitiesApi* | [**ExtractEntitiesPost**](docs/ExtractEntitiesApi.md#extractentitiespost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *LanguageDetectionApi* | [**LanguageDetectionGetLanguage**](docs/LanguageDetectionApi.md#languagedetectiongetlanguage) | **POST** /nlp-v2/language/detect | Detect language of text
 *LanguageTranslationApi* | [**LanguageTranslationTranslateDeuToEng**](docs/LanguageTranslationApi.md#languagetranslationtranslatedeutoeng) | **POST** /nlp-v2/translate/language/deu/to/eng | Translate German to English text with Deep Learning AI
@@ -116,7 +117,7 @@ Class | Method | HTTP request | Description
 *PosTaggerApi* | [**PosTaggerTagPronouns**](docs/PosTaggerApi.md#postaggertagpronouns) | **POST** /nlp-v2/pos/tag/pronouns | Part-of-speech tag a string, filter to pronouns
 *PosTaggerApi* | [**PosTaggerTagSentence**](docs/PosTaggerApi.md#postaggertagsentence) | **POST** /nlp-v2/pos/tag/sentence | Part-of-speech tag a string
 *PosTaggerApi* | [**PosTaggerTagVerbs**](docs/PosTaggerApi.md#postaggertagverbs) | **POST** /nlp-v2/pos/tag/verbs | Part-of-speech tag a string, filter to verbs
-*RephraseApi* | [**RephraseTranslateDeuToEng**](docs/RephraseApi.md#rephrasetranslatedeutoeng) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
+*RephraseApi* | [**RephraseEnglishRephraseSentenceBySentence**](docs/RephraseApi.md#rephraseenglishrephrasesentencebysentence) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
 *SegmentationApi* | [**SegmentationGetSentences**](docs/SegmentationApi.md#segmentationgetsentences) | **POST** /nlp-v2/segmentation/sentences | Extract sentences from string
 *SegmentationApi* | [**SegmentationGetWords**](docs/SegmentationApi.md#segmentationgetwords) | **POST** /nlp-v2/segmentation/words | Get words in input string
 *SpellcheckApi* | [**SpellcheckCheckSentence**](docs/SpellcheckApi.md#spellcheckchecksentence) | **POST** /nlp-v2/spellcheck/check/sentence | Check if sentence is spelled correctly
@@ -156,6 +157,8 @@ Class | Method | HTTP request | Description
  - [Model.SentenceSegmentationResponse](docs/SentenceSegmentationResponse.md)
  - [Model.SentimentAnalysisRequest](docs/SentimentAnalysisRequest.md)
  - [Model.SentimentAnalysisResponse](docs/SentimentAnalysisResponse.md)
+ - [Model.SubjectivityAnalysisRequest](docs/SubjectivityAnalysisRequest.md)
+ - [Model.SubjectivityAnalysisResponse](docs/SubjectivityAnalysisResponse.md)
  - [Model.WordPosition](docs/WordPosition.md)
 
 

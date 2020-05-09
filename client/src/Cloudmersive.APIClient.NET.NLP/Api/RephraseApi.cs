@@ -33,7 +33,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input rephrase request</param>
         /// <returns>RephraseResponse</returns>
-        RephraseResponse RephraseTranslateDeuToEng (RephraseRequest input);
+        RephraseResponse RephraseEnglishRephraseSentenceBySentence (RephraseRequest input);
 
         /// <summary>
         /// Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
@@ -44,7 +44,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input rephrase request</param>
         /// <returns>ApiResponse of RephraseResponse</returns>
-        ApiResponse<RephraseResponse> RephraseTranslateDeuToEngWithHttpInfo (RephraseRequest input);
+        ApiResponse<RephraseResponse> RephraseEnglishRephraseSentenceBySentenceWithHttpInfo (RephraseRequest input);
         #endregion Synchronous Operations
         #region Asynchronous Operations
         /// <summary>
@@ -56,7 +56,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input rephrase request</param>
         /// <returns>Task of RephraseResponse</returns>
-        System.Threading.Tasks.Task<RephraseResponse> RephraseTranslateDeuToEngAsync (RephraseRequest input);
+        System.Threading.Tasks.Task<RephraseResponse> RephraseEnglishRephraseSentenceBySentenceAsync (RephraseRequest input);
 
         /// <summary>
         /// Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
@@ -67,7 +67,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input rephrase request</param>
         /// <returns>Task of ApiResponse (RephraseResponse)</returns>
-        System.Threading.Tasks.Task<ApiResponse<RephraseResponse>> RephraseTranslateDeuToEngAsyncWithHttpInfo (RephraseRequest input);
+        System.Threading.Tasks.Task<ApiResponse<RephraseResponse>> RephraseEnglishRephraseSentenceBySentenceAsyncWithHttpInfo (RephraseRequest input);
         #endregion Asynchronous Operations
     }
 
@@ -174,9 +174,9 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input rephrase request</param>
         /// <returns>RephraseResponse</returns>
-        public RephraseResponse RephraseTranslateDeuToEng (RephraseRequest input)
+        public RephraseResponse RephraseEnglishRephraseSentenceBySentence (RephraseRequest input)
         {
-             ApiResponse<RephraseResponse> localVarResponse = RephraseTranslateDeuToEngWithHttpInfo(input);
+             ApiResponse<RephraseResponse> localVarResponse = RephraseEnglishRephraseSentenceBySentenceWithHttpInfo(input);
              return localVarResponse.Data;
         }
 
@@ -186,11 +186,11 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input rephrase request</param>
         /// <returns>ApiResponse of RephraseResponse</returns>
-        public ApiResponse< RephraseResponse > RephraseTranslateDeuToEngWithHttpInfo (RephraseRequest input)
+        public ApiResponse< RephraseResponse > RephraseEnglishRephraseSentenceBySentenceWithHttpInfo (RephraseRequest input)
         {
             // verify the required parameter 'input' is set
             if (input == null)
-                throw new ApiException(400, "Missing required parameter 'input' when calling RephraseApi->RephraseTranslateDeuToEng");
+                throw new ApiException(400, "Missing required parameter 'input' when calling RephraseApi->RephraseEnglishRephraseSentenceBySentence");
 
             var localVarPath = "/nlp-v2/rephrase/rephrase/eng/by-sentence";
             var localVarPathParams = new Dictionary<String, String>();
@@ -245,7 +245,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("RephraseTranslateDeuToEng", localVarResponse);
+                Exception exception = ExceptionFactory("RephraseEnglishRephraseSentenceBySentence", localVarResponse);
                 if (exception != null) throw exception;
             }
 
@@ -260,9 +260,9 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input rephrase request</param>
         /// <returns>Task of RephraseResponse</returns>
-        public async System.Threading.Tasks.Task<RephraseResponse> RephraseTranslateDeuToEngAsync (RephraseRequest input)
+        public async System.Threading.Tasks.Task<RephraseResponse> RephraseEnglishRephraseSentenceBySentenceAsync (RephraseRequest input)
         {
-             ApiResponse<RephraseResponse> localVarResponse = await RephraseTranslateDeuToEngAsyncWithHttpInfo(input);
+             ApiResponse<RephraseResponse> localVarResponse = await RephraseEnglishRephraseSentenceBySentenceAsyncWithHttpInfo(input);
              return localVarResponse.Data;
 
         }
@@ -273,11 +273,11 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
         /// <param name="input">Input rephrase request</param>
         /// <returns>Task of ApiResponse (RephraseResponse)</returns>
-        public async System.Threading.Tasks.Task<ApiResponse<RephraseResponse>> RephraseTranslateDeuToEngAsyncWithHttpInfo (RephraseRequest input)
+        public async System.Threading.Tasks.Task<ApiResponse<RephraseResponse>> RephraseEnglishRephraseSentenceBySentenceAsyncWithHttpInfo (RephraseRequest input)
         {
             // verify the required parameter 'input' is set
             if (input == null)
-                throw new ApiException(400, "Missing required parameter 'input' when calling RephraseApi->RephraseTranslateDeuToEng");
+                throw new ApiException(400, "Missing required parameter 'input' when calling RephraseApi->RephraseEnglishRephraseSentenceBySentence");
 
             var localVarPath = "/nlp-v2/rephrase/rephrase/eng/by-sentence";
             var localVarPathParams = new Dictionary<String, String>();
@@ -332,7 +332,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
 
             if (ExceptionFactory != null)
             {
-                Exception exception = ExceptionFactory("RephraseTranslateDeuToEng", localVarResponse);
+                Exception exception = ExceptionFactory("RephraseEnglishRephraseSentenceBySentence", localVarResponse);
                 if (exception != null) throw exception;
             }
 

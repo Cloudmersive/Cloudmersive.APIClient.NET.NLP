@@ -4,12 +4,12 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**RephraseTranslateDeuToEng**](RephraseApi.md#rephrasetranslatedeutoeng) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
+[**RephraseEnglishRephraseSentenceBySentence**](RephraseApi.md#rephraseenglishrephrasesentencebysentence) | **POST** /nlp-v2/rephrase/rephrase/eng/by-sentence | Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
 
 
-<a name="rephrasetranslatedeutoeng"></a>
-# **RephraseTranslateDeuToEng**
-> RephraseResponse RephraseTranslateDeuToEng (RephraseRequest input)
+<a name="rephraseenglishrephrasesentencebysentence"></a>
+# **RephraseEnglishRephraseSentenceBySentence**
+> RephraseResponse RephraseEnglishRephraseSentenceBySentence (RephraseRequest input)
 
 Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
 
@@ -25,7 +25,7 @@ using Cloudmersive.APIClient.NET.NLP.Model;
 
 namespace Example
 {
-    public class RephraseTranslateDeuToEngExample
+    public class RephraseEnglishRephraseSentenceBySentenceExample
     {
         public void main()
         {
@@ -40,12 +40,12 @@ namespace Example
             try
             {
                 // Rephrase, paraphrase English text sentence-by-sentence using Deep Learning AI
-                RephraseResponse result = apiInstance.RephraseTranslateDeuToEng(input);
+                RephraseResponse result = apiInstance.RephraseEnglishRephraseSentenceBySentence(input);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling RephraseApi.RephraseTranslateDeuToEng: " + e.Message );
+                Debug.Print("Exception when calling RephraseApi.RephraseEnglishRephraseSentenceBySentence: " + e.Message );
             }
         }
     }

@@ -65,14 +65,14 @@ namespace Cloudmersive.APIClient.NET.NLP.Test
 
         
         /// <summary>
-        /// Test RephraseTranslateDeuToEng
+        /// Test RephraseEnglishRephraseSentenceBySentence
         /// </summary>
         [Test]
-        public void RephraseTranslateDeuToEngTest()
+        public void RephraseEnglishRephraseSentenceBySentenceTest()
         {
             // TODO uncomment below to test the method and replace null with proper value
             //RephraseRequest input = null;
-            //var response = instance.RephraseTranslateDeuToEng(input);
+            //var response = instance.RephraseEnglishRephraseSentenceBySentence(input);
             //Assert.IsInstanceOf<RephraseResponse> (response, "response is RephraseResponse");
         }
         

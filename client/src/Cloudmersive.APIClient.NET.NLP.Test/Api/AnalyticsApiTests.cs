@@ -88,6 +88,18 @@ namespace Cloudmersive.APIClient.NET.NLP.Test
             //Assert.IsInstanceOf<SentimentAnalysisResponse> (response, "response is SentimentAnalysisResponse");
         }
         
+        /// <summary>
+        /// Test AnalyticsSubjectivity
+        /// </summary>
+        [Test]
+        public void AnalyticsSubjectivityTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //SubjectivityAnalysisRequest input = null;
+            //var response = instance.AnalyticsSubjectivity(input);
+            //Assert.IsInstanceOf<SubjectivityAnalysisResponse> (response, "response is SubjectivityAnalysisResponse");
+        }
+        
     }
 
 }
