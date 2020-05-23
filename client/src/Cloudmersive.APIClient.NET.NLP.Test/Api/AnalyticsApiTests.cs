@@ -89,6 +89,18 @@ namespace Cloudmersive.APIClient.NET.NLP.Test
         }
         
         /// <summary>
+        /// Test AnalyticsSimilarity
+        /// </summary>
+        [Test]
+        public void AnalyticsSimilarityTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //SimilarityAnalysisRequest input = null;
+            //var response = instance.AnalyticsSimilarity(input);
+            //Assert.IsInstanceOf<SimilarityAnalysisResponse> (response, "response is SimilarityAnalysisResponse");
+        }
+        
+        /// <summary>
         /// Test AnalyticsSubjectivity
         /// </summary>
         [Test]

@@ -67,6 +67,27 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// <returns>ApiResponse of SentimentAnalysisResponse</returns>
         ApiResponse<SentimentAnalysisResponse> AnalyticsSentimentWithHttpInfo (SentimentAnalysisRequest input);
         /// <summary>
+        /// Perform Semantic Similarity Comparison of Two Strings
+        /// </summary>
+        /// <remarks>
+        /// Analyze two input text strings, typically sentences, and determine the semantic similarity of each.  Semantic similarity refers to the degree to which two sentences mean the same thing semantically.  Uses advanced Deep Learning to perform the semantic similarity comparison.  Consumes 1-2 API calls per sentence.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input similarity analysis request</param>
+        /// <returns>SimilarityAnalysisResponse</returns>
+        SimilarityAnalysisResponse AnalyticsSimilarity (SimilarityAnalysisRequest input);
+
+        /// <summary>
+        /// Perform Semantic Similarity Comparison of Two Strings
+        /// </summary>
+        /// <remarks>
+        /// Analyze two input text strings, typically sentences, and determine the semantic similarity of each.  Semantic similarity refers to the degree to which two sentences mean the same thing semantically.  Uses advanced Deep Learning to perform the semantic similarity comparison.  Consumes 1-2 API calls per sentence.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input similarity analysis request</param>
+        /// <returns>ApiResponse of SimilarityAnalysisResponse</returns>
+        ApiResponse<SimilarityAnalysisResponse> AnalyticsSimilarityWithHttpInfo (SimilarityAnalysisRequest input);
+        /// <summary>
         /// Perform Subjectivity and Objectivity Analysis on Text
         /// </summary>
         /// <remarks>
@@ -131,6 +152,27 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// <param name="input">Input sentiment analysis request</param>
         /// <returns>Task of ApiResponse (SentimentAnalysisResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<SentimentAnalysisResponse>> AnalyticsSentimentAsyncWithHttpInfo (SentimentAnalysisRequest input);
+        /// <summary>
+        /// Perform Semantic Similarity Comparison of Two Strings
+        /// </summary>
+        /// <remarks>
+        /// Analyze two input text strings, typically sentences, and determine the semantic similarity of each.  Semantic similarity refers to the degree to which two sentences mean the same thing semantically.  Uses advanced Deep Learning to perform the semantic similarity comparison.  Consumes 1-2 API calls per sentence.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input similarity analysis request</param>
+        /// <returns>Task of SimilarityAnalysisResponse</returns>
+        System.Threading.Tasks.Task<SimilarityAnalysisResponse> AnalyticsSimilarityAsync (SimilarityAnalysisRequest input);
+
+        /// <summary>
+        /// Perform Semantic Similarity Comparison of Two Strings
+        /// </summary>
+        /// <remarks>
+        /// Analyze two input text strings, typically sentences, and determine the semantic similarity of each.  Semantic similarity refers to the degree to which two sentences mean the same thing semantically.  Uses advanced Deep Learning to perform the semantic similarity comparison.  Consumes 1-2 API calls per sentence.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input similarity analysis request</param>
+        /// <returns>Task of ApiResponse (SimilarityAnalysisResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<SimilarityAnalysisResponse>> AnalyticsSimilarityAsyncWithHttpInfo (SimilarityAnalysisRequest input);
         /// <summary>
         /// Perform Subjectivity and Objectivity Analysis on Text
         /// </summary>
@@ -296,10 +338,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
+                "application/json"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -383,10 +422,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
+                "application/json"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -469,10 +505,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
+                "application/json"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -556,10 +589,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
+                "application/json"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -596,6 +626,173 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
             return new ApiResponse<SentimentAnalysisResponse>(localVarStatusCode,
                 localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
                 (SentimentAnalysisResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SentimentAnalysisResponse)));
+        }
+
+        /// <summary>
+        /// Perform Semantic Similarity Comparison of Two Strings Analyze two input text strings, typically sentences, and determine the semantic similarity of each.  Semantic similarity refers to the degree to which two sentences mean the same thing semantically.  Uses advanced Deep Learning to perform the semantic similarity comparison.  Consumes 1-2 API calls per sentence.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input similarity analysis request</param>
+        /// <returns>SimilarityAnalysisResponse</returns>
+        public SimilarityAnalysisResponse AnalyticsSimilarity (SimilarityAnalysisRequest input)
+        {
+             ApiResponse<SimilarityAnalysisResponse> localVarResponse = AnalyticsSimilarityWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Perform Semantic Similarity Comparison of Two Strings Analyze two input text strings, typically sentences, and determine the semantic similarity of each.  Semantic similarity refers to the degree to which two sentences mean the same thing semantically.  Uses advanced Deep Learning to perform the semantic similarity comparison.  Consumes 1-2 API calls per sentence.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input similarity analysis request</param>
+        /// <returns>ApiResponse of SimilarityAnalysisResponse</returns>
+        public ApiResponse< SimilarityAnalysisResponse > AnalyticsSimilarityWithHttpInfo (SimilarityAnalysisRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AnalyticsApi->AnalyticsSimilarity");
+
+            var localVarPath = "/nlp-v2/analytics/similarity";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AnalyticsSimilarity", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SimilarityAnalysisResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SimilarityAnalysisResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SimilarityAnalysisResponse)));
+        }
+
+        /// <summary>
+        /// Perform Semantic Similarity Comparison of Two Strings Analyze two input text strings, typically sentences, and determine the semantic similarity of each.  Semantic similarity refers to the degree to which two sentences mean the same thing semantically.  Uses advanced Deep Learning to perform the semantic similarity comparison.  Consumes 1-2 API calls per sentence.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input similarity analysis request</param>
+        /// <returns>Task of SimilarityAnalysisResponse</returns>
+        public async System.Threading.Tasks.Task<SimilarityAnalysisResponse> AnalyticsSimilarityAsync (SimilarityAnalysisRequest input)
+        {
+             ApiResponse<SimilarityAnalysisResponse> localVarResponse = await AnalyticsSimilarityAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Perform Semantic Similarity Comparison of Two Strings Analyze two input text strings, typically sentences, and determine the semantic similarity of each.  Semantic similarity refers to the degree to which two sentences mean the same thing semantically.  Uses advanced Deep Learning to perform the semantic similarity comparison.  Consumes 1-2 API calls per sentence.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input similarity analysis request</param>
+        /// <returns>Task of ApiResponse (SimilarityAnalysisResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<SimilarityAnalysisResponse>> AnalyticsSimilarityAsyncWithHttpInfo (SimilarityAnalysisRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AnalyticsApi->AnalyticsSimilarity");
+
+            var localVarPath = "/nlp-v2/analytics/similarity";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AnalyticsSimilarity", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<SimilarityAnalysisResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (SimilarityAnalysisResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(SimilarityAnalysisResponse)));
         }
 
         /// <summary>
@@ -642,10 +839,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
+                "application/json"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)
@@ -729,10 +923,7 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
 
             // to determine the Accept header
             String[] localVarHttpHeaderAccepts = new String[] {
-                "application/json",
-                "text/json",
-                "application/xml",
-                "text/xml"
+                "application/json"
             };
             String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
             if (localVarHttpHeaderAccept != null)

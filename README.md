@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 This C# SDK is for the [Cloudmersive Natural Language Processing API](https://www.cloudmersive.com/nlp-api):
 
 - API version: v1
-- SDK version: 4.0.7
+- SDK version: 4.0.8
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -103,6 +103,7 @@ Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
 *AnalyticsApi* | [**AnalyticsProfanity**](docs/AnalyticsApi.md#analyticsprofanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 *AnalyticsApi* | [**AnalyticsSentiment**](docs/AnalyticsApi.md#analyticssentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
+*AnalyticsApi* | [**AnalyticsSimilarity**](docs/AnalyticsApi.md#analyticssimilarity) | **POST** /nlp-v2/analytics/similarity | Perform Semantic Similarity Comparison of Two Strings
 *AnalyticsApi* | [**AnalyticsSubjectivity**](docs/AnalyticsApi.md#analyticssubjectivity) | **POST** /nlp-v2/analytics/subjectivity | Perform Subjectivity and Objectivity Analysis on Text
 *ExtractEntitiesApi* | [**ExtractEntitiesPost**](docs/ExtractEntitiesApi.md#extractentitiespost) | **POST** /nlp-v2/extract-entities | Extract entities from string
 *LanguageDetectionApi* | [**LanguageDetectionGetLanguage**](docs/LanguageDetectionApi.md#languagedetectiongetlanguage) | **POST** /nlp-v2/language/detect | Detect language of text
@@ -157,6 +158,8 @@ Class | Method | HTTP request | Description
  - [Model.SentenceSegmentationResponse](docs/SentenceSegmentationResponse.md)
  - [Model.SentimentAnalysisRequest](docs/SentimentAnalysisRequest.md)
  - [Model.SentimentAnalysisResponse](docs/SentimentAnalysisResponse.md)
+ - [Model.SimilarityAnalysisRequest](docs/SimilarityAnalysisRequest.md)
+ - [Model.SimilarityAnalysisResponse](docs/SimilarityAnalysisResponse.md)
  - [Model.SubjectivityAnalysisRequest](docs/SubjectivityAnalysisRequest.md)
  - [Model.SubjectivityAnalysisResponse](docs/SubjectivityAnalysisResponse.md)
  - [Model.WordPosition](docs/WordPosition.md)
