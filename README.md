@@ -5,7 +5,7 @@ The powerful Natural Language Processing APIs (v2) let you perform part of speec
 This C# SDK is for the [Cloudmersive Natural Language Processing API](https://www.cloudmersive.com/nlp-api):
 
 - API version: v1
-- SDK version: 4.0.8
+- SDK version: 4.0.9
 - Build package: io.swagger.codegen.languages.CSharpClientCodegen
 
 <a name="frameworks-supported"></a>
@@ -76,17 +76,17 @@ namespace Example
             // Configuration.Default.ApiKeyPrefix.Add("Apikey", "Bearer");
 
             var apiInstance = new AnalyticsApi();
-            var input = new ProfanityAnalysisRequest(); // ProfanityAnalysisRequest | Input profanity analysis request
+            var input = new HateSpeechAnalysisRequest(); // HateSpeechAnalysisRequest | Input hate speech analysis request
 
             try
             {
-                // Perform Profanity and Obscene Language Analysis and Detection on Text
-                ProfanityAnalysisResponse result = apiInstance.AnalyticsProfanity(input);
+                // Perform Hate Speech Analysis and Detection on Text
+                HateSpeechAnalysisResponse result = apiInstance.AnalyticsHateSpeech(input);
                 Debug.WriteLine(result);
             }
             catch (Exception e)
             {
-                Debug.Print("Exception when calling AnalyticsApi.AnalyticsProfanity: " + e.Message );
+                Debug.Print("Exception when calling AnalyticsApi.AnalyticsHateSpeech: " + e.Message );
             }
 
         }
@@ -101,6 +101,7 @@ All URIs are relative to *https://api.cloudmersive.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
+*AnalyticsApi* | [**AnalyticsHateSpeech**](docs/AnalyticsApi.md#analyticshatespeech) | **POST** /nlp-v2/analytics/hate-speech | Perform Hate Speech Analysis and Detection on Text
 *AnalyticsApi* | [**AnalyticsProfanity**](docs/AnalyticsApi.md#analyticsprofanity) | **POST** /nlp-v2/analytics/profanity | Perform Profanity and Obscene Language Analysis and Detection on Text
 *AnalyticsApi* | [**AnalyticsSentiment**](docs/AnalyticsApi.md#analyticssentiment) | **POST** /nlp-v2/analytics/sentiment | Perform Sentiment Analysis and Classification on Text
 *AnalyticsApi* | [**AnalyticsSimilarity**](docs/AnalyticsApi.md#analyticssimilarity) | **POST** /nlp-v2/analytics/similarity | Perform Semantic Similarity Comparison of Two Strings
@@ -138,6 +139,8 @@ Class | Method | HTTP request | Description
  - [Model.ExtractEntitiesResponse](docs/ExtractEntitiesResponse.md)
  - [Model.GetWordsRequest](docs/GetWordsRequest.md)
  - [Model.GetWordsResponse](docs/GetWordsResponse.md)
+ - [Model.HateSpeechAnalysisRequest](docs/HateSpeechAnalysisRequest.md)
+ - [Model.HateSpeechAnalysisResponse](docs/HateSpeechAnalysisResponse.md)
  - [Model.LanguageDetectionRequest](docs/LanguageDetectionRequest.md)
  - [Model.LanguageDetectionResponse](docs/LanguageDetectionResponse.md)
  - [Model.LanguageTranslationRequest](docs/LanguageTranslationRequest.md)

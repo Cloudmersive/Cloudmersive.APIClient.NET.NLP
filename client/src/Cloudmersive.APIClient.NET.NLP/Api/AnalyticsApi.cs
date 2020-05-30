@@ -25,6 +25,27 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
     {
         #region Synchronous Operations
         /// <summary>
+        /// Perform Hate Speech Analysis and Detection on Text
+        /// </summary>
+        /// <remarks>
+        /// Analyze input text using advanced Hate Speech Analysis to determine if the input contains hate speech language.  Supports English language input.  Consumes 1-2 API calls per sentence.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input hate speech analysis request</param>
+        /// <returns>HateSpeechAnalysisResponse</returns>
+        HateSpeechAnalysisResponse AnalyticsHateSpeech (HateSpeechAnalysisRequest input);
+
+        /// <summary>
+        /// Perform Hate Speech Analysis and Detection on Text
+        /// </summary>
+        /// <remarks>
+        /// Analyze input text using advanced Hate Speech Analysis to determine if the input contains hate speech language.  Supports English language input.  Consumes 1-2 API calls per sentence.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input hate speech analysis request</param>
+        /// <returns>ApiResponse of HateSpeechAnalysisResponse</returns>
+        ApiResponse<HateSpeechAnalysisResponse> AnalyticsHateSpeechWithHttpInfo (HateSpeechAnalysisRequest input);
+        /// <summary>
         /// Perform Profanity and Obscene Language Analysis and Detection on Text
         /// </summary>
         /// <remarks>
@@ -110,6 +131,27 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         ApiResponse<SubjectivityAnalysisResponse> AnalyticsSubjectivityWithHttpInfo (SubjectivityAnalysisRequest input);
         #endregion Synchronous Operations
         #region Asynchronous Operations
+        /// <summary>
+        /// Perform Hate Speech Analysis and Detection on Text
+        /// </summary>
+        /// <remarks>
+        /// Analyze input text using advanced Hate Speech Analysis to determine if the input contains hate speech language.  Supports English language input.  Consumes 1-2 API calls per sentence.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input hate speech analysis request</param>
+        /// <returns>Task of HateSpeechAnalysisResponse</returns>
+        System.Threading.Tasks.Task<HateSpeechAnalysisResponse> AnalyticsHateSpeechAsync (HateSpeechAnalysisRequest input);
+
+        /// <summary>
+        /// Perform Hate Speech Analysis and Detection on Text
+        /// </summary>
+        /// <remarks>
+        /// Analyze input text using advanced Hate Speech Analysis to determine if the input contains hate speech language.  Supports English language input.  Consumes 1-2 API calls per sentence.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input hate speech analysis request</param>
+        /// <returns>Task of ApiResponse (HateSpeechAnalysisResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<HateSpeechAnalysisResponse>> AnalyticsHateSpeechAsyncWithHttpInfo (HateSpeechAnalysisRequest input);
         /// <summary>
         /// Perform Profanity and Obscene Language Analysis and Detection on Text
         /// </summary>
@@ -292,6 +334,173 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         public void AddDefaultHeader(string key, string value)
         {
             this.Configuration.AddDefaultHeader(key, value);
+        }
+
+        /// <summary>
+        /// Perform Hate Speech Analysis and Detection on Text Analyze input text using advanced Hate Speech Analysis to determine if the input contains hate speech language.  Supports English language input.  Consumes 1-2 API calls per sentence.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input hate speech analysis request</param>
+        /// <returns>HateSpeechAnalysisResponse</returns>
+        public HateSpeechAnalysisResponse AnalyticsHateSpeech (HateSpeechAnalysisRequest input)
+        {
+             ApiResponse<HateSpeechAnalysisResponse> localVarResponse = AnalyticsHateSpeechWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Perform Hate Speech Analysis and Detection on Text Analyze input text using advanced Hate Speech Analysis to determine if the input contains hate speech language.  Supports English language input.  Consumes 1-2 API calls per sentence.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input hate speech analysis request</param>
+        /// <returns>ApiResponse of HateSpeechAnalysisResponse</returns>
+        public ApiResponse< HateSpeechAnalysisResponse > AnalyticsHateSpeechWithHttpInfo (HateSpeechAnalysisRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AnalyticsApi->AnalyticsHateSpeech");
+
+            var localVarPath = "/nlp-v2/analytics/hate-speech";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AnalyticsHateSpeech", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<HateSpeechAnalysisResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HateSpeechAnalysisResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HateSpeechAnalysisResponse)));
+        }
+
+        /// <summary>
+        /// Perform Hate Speech Analysis and Detection on Text Analyze input text using advanced Hate Speech Analysis to determine if the input contains hate speech language.  Supports English language input.  Consumes 1-2 API calls per sentence.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input hate speech analysis request</param>
+        /// <returns>Task of HateSpeechAnalysisResponse</returns>
+        public async System.Threading.Tasks.Task<HateSpeechAnalysisResponse> AnalyticsHateSpeechAsync (HateSpeechAnalysisRequest input)
+        {
+             ApiResponse<HateSpeechAnalysisResponse> localVarResponse = await AnalyticsHateSpeechAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Perform Hate Speech Analysis and Detection on Text Analyze input text using advanced Hate Speech Analysis to determine if the input contains hate speech language.  Supports English language input.  Consumes 1-2 API calls per sentence.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input hate speech analysis request</param>
+        /// <returns>Task of ApiResponse (HateSpeechAnalysisResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<HateSpeechAnalysisResponse>> AnalyticsHateSpeechAsyncWithHttpInfo (HateSpeechAnalysisRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling AnalyticsApi->AnalyticsHateSpeech");
+
+            var localVarPath = "/nlp-v2/analytics/hate-speech";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("AnalyticsHateSpeech", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<HateSpeechAnalysisResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (HateSpeechAnalysisResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(HateSpeechAnalysisResponse)));
         }
 
         /// <summary>

@@ -65,6 +65,18 @@ namespace Cloudmersive.APIClient.NET.NLP.Test
 
         
         /// <summary>
+        /// Test AnalyticsHateSpeech
+        /// </summary>
+        [Test]
+        public void AnalyticsHateSpeechTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //HateSpeechAnalysisRequest input = null;
+            //var response = instance.AnalyticsHateSpeech(input);
+            //Assert.IsInstanceOf<HateSpeechAnalysisResponse> (response, "response is HateSpeechAnalysisResponse");
+        }
+        
+        /// <summary>
         /// Test AnalyticsProfanity
         /// </summary>
         [Test]
