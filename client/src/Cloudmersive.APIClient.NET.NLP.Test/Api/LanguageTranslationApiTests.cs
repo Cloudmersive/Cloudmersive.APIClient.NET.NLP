@@ -89,6 +89,18 @@ namespace Cloudmersive.APIClient.NET.NLP.Test
         }
         
         /// <summary>
+        /// Test LanguageTranslationTranslateEngToFra
+        /// </summary>
+        [Test]
+        public void LanguageTranslationTranslateEngToFraTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //LanguageTranslationRequest input = null;
+            //var response = instance.LanguageTranslationTranslateEngToFra(input);
+            //Assert.IsInstanceOf<LanguageTranslationResponse> (response, "response is LanguageTranslationResponse");
+        }
+        
+        /// <summary>
         /// Test LanguageTranslationTranslateEngToRus
         /// </summary>
         [Test]
@@ -97,6 +109,18 @@ namespace Cloudmersive.APIClient.NET.NLP.Test
             // TODO uncomment below to test the method and replace null with proper value
             //LanguageTranslationRequest input = null;
             //var response = instance.LanguageTranslationTranslateEngToRus(input);
+            //Assert.IsInstanceOf<LanguageTranslationResponse> (response, "response is LanguageTranslationResponse");
+        }
+        
+        /// <summary>
+        /// Test LanguageTranslationTranslateFraToEng
+        /// </summary>
+        [Test]
+        public void LanguageTranslationTranslateFraToEngTest()
+        {
+            // TODO uncomment below to test the method and replace null with proper value
+            //LanguageTranslationRequest input = null;
+            //var response = instance.LanguageTranslationTranslateFraToEng(input);
             //Assert.IsInstanceOf<LanguageTranslationResponse> (response, "response is LanguageTranslationResponse");
         }
         

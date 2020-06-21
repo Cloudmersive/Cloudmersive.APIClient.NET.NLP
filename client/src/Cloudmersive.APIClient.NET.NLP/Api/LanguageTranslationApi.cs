@@ -67,6 +67,27 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// <returns>ApiResponse of LanguageTranslationResponse</returns>
         ApiResponse<LanguageTranslationResponse> LanguageTranslationTranslateEngToDeuWithHttpInfo (LanguageTranslationRequest input);
         /// <summary>
+        /// Translate English to French text with Deep Learning AI
+        /// </summary>
+        /// <remarks>
+        /// Automatically translates input text in English to output text in French using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input translation request</param>
+        /// <returns>LanguageTranslationResponse</returns>
+        LanguageTranslationResponse LanguageTranslationTranslateEngToFra (LanguageTranslationRequest input);
+
+        /// <summary>
+        /// Translate English to French text with Deep Learning AI
+        /// </summary>
+        /// <remarks>
+        /// Automatically translates input text in English to output text in French using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input translation request</param>
+        /// <returns>ApiResponse of LanguageTranslationResponse</returns>
+        ApiResponse<LanguageTranslationResponse> LanguageTranslationTranslateEngToFraWithHttpInfo (LanguageTranslationRequest input);
+        /// <summary>
         /// Translate English to Russian text with Deep Learning AI
         /// </summary>
         /// <remarks>
@@ -87,6 +108,27 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// <param name="input">Input translation request</param>
         /// <returns>ApiResponse of LanguageTranslationResponse</returns>
         ApiResponse<LanguageTranslationResponse> LanguageTranslationTranslateEngToRusWithHttpInfo (LanguageTranslationRequest input);
+        /// <summary>
+        /// Translate French to English text with Deep Learning AI
+        /// </summary>
+        /// <remarks>
+        /// Automatically translates input text in French to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input translation request</param>
+        /// <returns>LanguageTranslationResponse</returns>
+        LanguageTranslationResponse LanguageTranslationTranslateFraToEng (LanguageTranslationRequest input);
+
+        /// <summary>
+        /// Translate French to English text with Deep Learning AI
+        /// </summary>
+        /// <remarks>
+        /// Automatically translates input text in French to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input translation request</param>
+        /// <returns>ApiResponse of LanguageTranslationResponse</returns>
+        ApiResponse<LanguageTranslationResponse> LanguageTranslationTranslateFraToEngWithHttpInfo (LanguageTranslationRequest input);
         /// <summary>
         /// Translate Russian to English text with Deep Learning AI
         /// </summary>
@@ -153,6 +195,27 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// <returns>Task of ApiResponse (LanguageTranslationResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<LanguageTranslationResponse>> LanguageTranslationTranslateEngToDeuAsyncWithHttpInfo (LanguageTranslationRequest input);
         /// <summary>
+        /// Translate English to French text with Deep Learning AI
+        /// </summary>
+        /// <remarks>
+        /// Automatically translates input text in English to output text in French using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input translation request</param>
+        /// <returns>Task of LanguageTranslationResponse</returns>
+        System.Threading.Tasks.Task<LanguageTranslationResponse> LanguageTranslationTranslateEngToFraAsync (LanguageTranslationRequest input);
+
+        /// <summary>
+        /// Translate English to French text with Deep Learning AI
+        /// </summary>
+        /// <remarks>
+        /// Automatically translates input text in English to output text in French using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input translation request</param>
+        /// <returns>Task of ApiResponse (LanguageTranslationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LanguageTranslationResponse>> LanguageTranslationTranslateEngToFraAsyncWithHttpInfo (LanguageTranslationRequest input);
+        /// <summary>
         /// Translate English to Russian text with Deep Learning AI
         /// </summary>
         /// <remarks>
@@ -173,6 +236,27 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         /// <param name="input">Input translation request</param>
         /// <returns>Task of ApiResponse (LanguageTranslationResponse)</returns>
         System.Threading.Tasks.Task<ApiResponse<LanguageTranslationResponse>> LanguageTranslationTranslateEngToRusAsyncWithHttpInfo (LanguageTranslationRequest input);
+        /// <summary>
+        /// Translate French to English text with Deep Learning AI
+        /// </summary>
+        /// <remarks>
+        /// Automatically translates input text in French to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input translation request</param>
+        /// <returns>Task of LanguageTranslationResponse</returns>
+        System.Threading.Tasks.Task<LanguageTranslationResponse> LanguageTranslationTranslateFraToEngAsync (LanguageTranslationRequest input);
+
+        /// <summary>
+        /// Translate French to English text with Deep Learning AI
+        /// </summary>
+        /// <remarks>
+        /// Automatically translates input text in French to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+        /// </remarks>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input translation request</param>
+        /// <returns>Task of ApiResponse (LanguageTranslationResponse)</returns>
+        System.Threading.Tasks.Task<ApiResponse<LanguageTranslationResponse>> LanguageTranslationTranslateFraToEngAsyncWithHttpInfo (LanguageTranslationRequest input);
         /// <summary>
         /// Translate Russian to English text with Deep Learning AI
         /// </summary>
@@ -629,6 +713,173 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
         }
 
         /// <summary>
+        /// Translate English to French text with Deep Learning AI Automatically translates input text in English to output text in French using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input translation request</param>
+        /// <returns>LanguageTranslationResponse</returns>
+        public LanguageTranslationResponse LanguageTranslationTranslateEngToFra (LanguageTranslationRequest input)
+        {
+             ApiResponse<LanguageTranslationResponse> localVarResponse = LanguageTranslationTranslateEngToFraWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Translate English to French text with Deep Learning AI Automatically translates input text in English to output text in French using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input translation request</param>
+        /// <returns>ApiResponse of LanguageTranslationResponse</returns>
+        public ApiResponse< LanguageTranslationResponse > LanguageTranslationTranslateEngToFraWithHttpInfo (LanguageTranslationRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling LanguageTranslationApi->LanguageTranslationTranslateEngToFra");
+
+            var localVarPath = "/nlp-v2/translate/language/eng/to/fra";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LanguageTranslationTranslateEngToFra", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LanguageTranslationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LanguageTranslationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LanguageTranslationResponse)));
+        }
+
+        /// <summary>
+        /// Translate English to French text with Deep Learning AI Automatically translates input text in English to output text in French using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input translation request</param>
+        /// <returns>Task of LanguageTranslationResponse</returns>
+        public async System.Threading.Tasks.Task<LanguageTranslationResponse> LanguageTranslationTranslateEngToFraAsync (LanguageTranslationRequest input)
+        {
+             ApiResponse<LanguageTranslationResponse> localVarResponse = await LanguageTranslationTranslateEngToFraAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Translate English to French text with Deep Learning AI Automatically translates input text in English to output text in French using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input translation request</param>
+        /// <returns>Task of ApiResponse (LanguageTranslationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LanguageTranslationResponse>> LanguageTranslationTranslateEngToFraAsyncWithHttpInfo (LanguageTranslationRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling LanguageTranslationApi->LanguageTranslationTranslateEngToFra");
+
+            var localVarPath = "/nlp-v2/translate/language/eng/to/fra";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LanguageTranslationTranslateEngToFra", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LanguageTranslationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LanguageTranslationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LanguageTranslationResponse)));
+        }
+
+        /// <summary>
         /// Translate English to Russian text with Deep Learning AI Automatically translates input text in English to output text in Russian using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
         /// </summary>
         /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
@@ -787,6 +1038,173 @@ namespace Cloudmersive.APIClient.NET.NLP.Api
             if (ExceptionFactory != null)
             {
                 Exception exception = ExceptionFactory("LanguageTranslationTranslateEngToRus", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LanguageTranslationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LanguageTranslationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LanguageTranslationResponse)));
+        }
+
+        /// <summary>
+        /// Translate French to English text with Deep Learning AI Automatically translates input text in French to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input translation request</param>
+        /// <returns>LanguageTranslationResponse</returns>
+        public LanguageTranslationResponse LanguageTranslationTranslateFraToEng (LanguageTranslationRequest input)
+        {
+             ApiResponse<LanguageTranslationResponse> localVarResponse = LanguageTranslationTranslateFraToEngWithHttpInfo(input);
+             return localVarResponse.Data;
+        }
+
+        /// <summary>
+        /// Translate French to English text with Deep Learning AI Automatically translates input text in French to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input translation request</param>
+        /// <returns>ApiResponse of LanguageTranslationResponse</returns>
+        public ApiResponse< LanguageTranslationResponse > LanguageTranslationTranslateFraToEngWithHttpInfo (LanguageTranslationRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling LanguageTranslationApi->LanguageTranslationTranslateFraToEng");
+
+            var localVarPath = "/nlp-v2/translate/language/fra/to/eng";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) this.Configuration.ApiClient.CallApi(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LanguageTranslationTranslateFraToEng", localVarResponse);
+                if (exception != null) throw exception;
+            }
+
+            return new ApiResponse<LanguageTranslationResponse>(localVarStatusCode,
+                localVarResponse.Headers.ToDictionary(x => x.Name, x => x.Value.ToString()),
+                (LanguageTranslationResponse) this.Configuration.ApiClient.Deserialize(localVarResponse, typeof(LanguageTranslationResponse)));
+        }
+
+        /// <summary>
+        /// Translate French to English text with Deep Learning AI Automatically translates input text in French to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input translation request</param>
+        /// <returns>Task of LanguageTranslationResponse</returns>
+        public async System.Threading.Tasks.Task<LanguageTranslationResponse> LanguageTranslationTranslateFraToEngAsync (LanguageTranslationRequest input)
+        {
+             ApiResponse<LanguageTranslationResponse> localVarResponse = await LanguageTranslationTranslateFraToEngAsyncWithHttpInfo(input);
+             return localVarResponse.Data;
+
+        }
+
+        /// <summary>
+        /// Translate French to English text with Deep Learning AI Automatically translates input text in French to output text in English using advanced Deep Learning and Neural NLP.  Consumes 1-2 API calls per input sentence.
+        /// </summary>
+        /// <exception cref="Cloudmersive.APIClient.NET.NLP.Client.ApiException">Thrown when fails to make API call</exception>
+        /// <param name="input">Input translation request</param>
+        /// <returns>Task of ApiResponse (LanguageTranslationResponse)</returns>
+        public async System.Threading.Tasks.Task<ApiResponse<LanguageTranslationResponse>> LanguageTranslationTranslateFraToEngAsyncWithHttpInfo (LanguageTranslationRequest input)
+        {
+            // verify the required parameter 'input' is set
+            if (input == null)
+                throw new ApiException(400, "Missing required parameter 'input' when calling LanguageTranslationApi->LanguageTranslationTranslateFraToEng");
+
+            var localVarPath = "/nlp-v2/translate/language/fra/to/eng";
+            var localVarPathParams = new Dictionary<String, String>();
+            var localVarQueryParams = new List<KeyValuePair<String, String>>();
+            var localVarHeaderParams = new Dictionary<String, String>(this.Configuration.DefaultHeader);
+            var localVarFormParams = new Dictionary<String, String>();
+            var localVarFileParams = new Dictionary<String, FileParameter>();
+            Object localVarPostBody = null;
+
+            // to determine the Content-Type header
+            String[] localVarHttpContentTypes = new String[] {
+                "application/json", 
+                "text/json", 
+                "application/xml", 
+                "text/xml", 
+                "application/x-www-form-urlencoded"
+            };
+            String localVarHttpContentType = this.Configuration.ApiClient.SelectHeaderContentType(localVarHttpContentTypes);
+
+            // to determine the Accept header
+            String[] localVarHttpHeaderAccepts = new String[] {
+                "application/json"
+            };
+            String localVarHttpHeaderAccept = this.Configuration.ApiClient.SelectHeaderAccept(localVarHttpHeaderAccepts);
+            if (localVarHttpHeaderAccept != null)
+                localVarHeaderParams.Add("Accept", localVarHttpHeaderAccept);
+
+            if (input != null && input.GetType() != typeof(byte[]))
+            {
+                localVarPostBody = this.Configuration.ApiClient.Serialize(input); // http body (model) parameter
+            }
+            else
+            {
+                localVarPostBody = input; // byte array
+            }
+
+            // authentication (Apikey) required
+            if (!String.IsNullOrEmpty(this.Configuration.GetApiKeyWithPrefix("Apikey")))
+            {
+                localVarHeaderParams["Apikey"] = this.Configuration.GetApiKeyWithPrefix("Apikey");
+            }
+
+            // make the HTTP request
+            IRestResponse localVarResponse = (IRestResponse) await this.Configuration.ApiClient.CallApiAsync(localVarPath,
+                Method.POST, localVarQueryParams, localVarPostBody, localVarHeaderParams, localVarFormParams, localVarFileParams,
+                localVarPathParams, localVarHttpContentType);
+
+            int localVarStatusCode = (int) localVarResponse.StatusCode;
+
+            if (ExceptionFactory != null)
+            {
+                Exception exception = ExceptionFactory("LanguageTranslationTranslateFraToEng", localVarResponse);
                 if (exception != null) throw exception;
             }
 
